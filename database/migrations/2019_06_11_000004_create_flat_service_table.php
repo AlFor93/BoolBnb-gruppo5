@@ -15,6 +15,8 @@ class CreateFlatServiceTable extends Migration
     {
         Schema::create('flat_service', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('flat_id')->unsigned()->index();
+            $table->bigInteger('service_id')->unsigned()->index();
             $table->timestamps();
         });
     }
