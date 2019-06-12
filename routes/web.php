@@ -8,3 +8,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/BoolBnB' , 'BoolHomeController@index')->name('BoolHome');
