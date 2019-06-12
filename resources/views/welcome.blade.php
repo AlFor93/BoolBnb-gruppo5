@@ -64,7 +64,7 @@
         </style>
 
         <link rel="stylesheet" href="{{ mix('css/app.css')}}">
-        
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -86,6 +86,8 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                <h1>Ciao a tutti</h1>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
