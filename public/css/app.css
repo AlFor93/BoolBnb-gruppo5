@@ -10662,3 +10662,15 @@ a.text-dark:focus {
   }
 }
 
+header h1 {
+  color: red;
+}
+
+.main-home h1 {
+  color: green;
+}
+
+footer h1 {
+  color: blue;
+}
+

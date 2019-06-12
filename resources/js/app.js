@@ -1,11 +1,18 @@
 
+// require('./bootstrap');
 
-require('./bootstrap');
+// window.Vue = require('vue');
+//
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//
+// const app = new Vue({
+//     el: '#app',
+// });
 
-window.Vue = require('vue');
+var $ = require('jquery');
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+function init() {
+  console.log('jQuery OK');
+}
 
-const app = new Vue({
-    el: '#app',
-});
+$(document).ready(init);
