@@ -12,4 +12,12 @@ class Flat extends Model
     'mq' ,
     'address' ,
   ];
+
+  function user() {
+    return $this->belongsTo(User::class);
+  }
+
+  function services() {
+    return $this->belongsToMany(Service::class);
+  }
 }
