@@ -10,7 +10,7 @@ class Flat extends Model
     'name' ,
     'number_of_rooms' ,
     'mq' ,
-    'address' ,
+    'address' 
   ];
 
   function user() {
