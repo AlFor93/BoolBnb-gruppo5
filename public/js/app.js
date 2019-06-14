@@ -10739,8 +10739,8 @@ $(document).ready(init);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/BoolBnB-gruppo5/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/BoolBnB-gruppo5/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/BoolBnb-gruppo5/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/BoolBnb-gruppo5/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

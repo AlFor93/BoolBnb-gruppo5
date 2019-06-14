@@ -7,11 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Header
-@import 'header.scss';
-
-// Home
-@import 'home.scss';
-
-// Footer
-@import 'footer.scss';
+// Home style
+@import 'home/home_header.scss';
+@import 'home/home_content.scss';
+@import 'home/home_footer.scss';
