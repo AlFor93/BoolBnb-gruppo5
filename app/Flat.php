@@ -10,14 +10,20 @@ class Flat extends Model
     'name' ,
     'number_of_rooms' ,
     'mq' ,
-    'address' 
+    'address'
   ];
 
   function user() {
     return $this->belongsTo(User::class);
   }
 
+  function images() {
+    return $this->hasMany(Image::class);
+  }
+
   function services() {
     return $this->belongsToMany(Service::class);
   }
+
+
 }

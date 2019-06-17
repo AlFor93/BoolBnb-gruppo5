@@ -20,7 +20,7 @@ class CreateFlatsTable extends Migration
             $table->integer('mq');
             $table->string('address');
             $table->bigInteger('user_id')->unsigned()->index();
-            $table->bigInteger('img_id')->unsigned()->index();
+            $table->bigInteger('image_id')->unsigned()->index();
             $table->timestamps();
         });
     }
