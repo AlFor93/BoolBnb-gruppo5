@@ -1,4 +1,4 @@
-@extends('index.flats')
+@extends('index.flatsIndex')
 
 @section('content')
 
