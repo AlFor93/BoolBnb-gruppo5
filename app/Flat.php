@@ -18,7 +18,7 @@ class Flat extends Model
   }
 
   function images() {
-    return $this->hasMany('App/Images'::class);
+    return $this->hasMany(Image::class);
   }
 
   function services() {
