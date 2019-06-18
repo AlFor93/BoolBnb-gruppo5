@@ -31,6 +31,7 @@ class AddForeignKeys extends Migration
               ->references('id')
               ->on('flats');
       });
+      
       Schema::table('flat_service', function (Blueprint $table){
         $table->foreign('service_id' , 'service')
               ->references('id')

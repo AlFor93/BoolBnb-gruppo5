@@ -17,13 +17,13 @@ class FlatSeeder extends Seeder
                     // senza chiaVE ESTERNA SI PUO FARE DIRETTAMENTE IL CREATE()
 
 
-
                     $user= App\User::inRandomOrder()->first();
                     $flat->user()->associate($user);
                     $flat->save();
 
                     $images = App\Image::inRandomOrder()->take(rand(1,5))->get();
-                    $flat->images()->attach($images);
+                    $flat->user()->associate($images);
+                    $flat->save();
 
 
                     $services= App\Service::inRandomOrder()->take(rand(1,5))->get();
