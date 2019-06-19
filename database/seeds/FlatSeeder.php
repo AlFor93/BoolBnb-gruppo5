@@ -21,10 +21,6 @@ class FlatSeeder extends Seeder
                     $flat->user()->associate($user);
                     $flat->save();
 
-                    // $images = App\Image::inRandomOrder()->take(rand(1,5))->get();
-                    // $flat->user()->associate($images);
-                    // $flat->save();
-
 
                     $services= App\Service::inRandomOrder()->take(rand(1,5))->get();
                     $flat->services()->attach($services);

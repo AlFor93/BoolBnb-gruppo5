@@ -17,7 +17,8 @@ class CreateImagesTable extends Migration
 
             $table->bigIncrements('id');
             $table->string('filename');
-            $table->string('img_file')->unique();
+            $table->string('img_file');
+            $table->bigInteger('flat_id')->unsigned()->index();
             $table->timestamps();
         });
     }

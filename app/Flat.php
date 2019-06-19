@@ -17,13 +17,14 @@ class Flat extends Model
     return $this->belongsTo(User::class);
   }
 
-  // function images() {
-  //   return $this->hasMany(Image::class);
-  // }
+
 
   function services() {
     return $this->belongsToMany(Service::class);
   }
 
+  function images() {
+    return $this->hasMany(Image::class);
+  }
 
 }

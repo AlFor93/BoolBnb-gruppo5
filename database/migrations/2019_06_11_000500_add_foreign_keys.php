@@ -17,26 +17,28 @@ class AddForeignKeys extends Migration
         $table->foreign('user_id' , 'user')
               ->references('id')
               ->on('users');
+
       });
 
-      // Schema::table('flats', function (Blueprint $table){
-      //
-      //   $table->foreign('image_id' , 'image')
-      //         ->references('id')
-      //         ->on('images');
-      // });
+
 
       Schema::table('flat_service', function (Blueprint $table){
         $table->foreign('flat_id' , 'flat')
               ->references('id')
               ->on('flats');
-      });
 
-      Schema::table('flat_service', function (Blueprint $table){
         $table->foreign('service_id' , 'service')
               ->references('id')
               ->on('services');
       });
+
+      Schema::table('images', function (Blueprint $table){
+
+        $table->foreign('flat_id' , 'flat2')
+              ->references('id')
+              ->on('flats');
+      });
+
     }
 
     /**
