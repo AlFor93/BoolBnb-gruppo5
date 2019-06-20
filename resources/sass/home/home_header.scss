@@ -6,6 +6,9 @@
   padding: 10px;
 
   .header-searchbar{
+    display: flex;
+    align-items: center;
+       
     .logo{
       width: 50px;
     }

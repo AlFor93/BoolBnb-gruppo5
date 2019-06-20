@@ -11,6 +11,11 @@
   padding: 10px;
 }
 
+.header-home .header-searchbar {
+  display: flex;
+  align-items: center;
+}
+
 .header-home .header-searchbar .logo {
   width: 50px;
 }
