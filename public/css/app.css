@@ -174,7 +174,21 @@ header h1 {
 .main-flat .second-container .left .center .service {
   width: 100%;
   height: 30%;
-  background: lightgray;
+  display: flex;
+}
+
+.main-flat .second-container .left .center .service i {
+  margin-top: 3px;
+}
+
+.main-flat .second-container .left .center .service .left {
+  width: 5%;
+  height: 100%;
+}
+
+.main-flat .second-container .left .center .service .right {
+  width: 95%;
+  height: 100%;
 }
 
 .main-flat .second-container .left .bottom {
