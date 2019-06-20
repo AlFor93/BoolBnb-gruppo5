@@ -1,5 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);header h1 {
-  color: lightgreen;
+@import url(https://fonts.googleapis.com/css?family=Nunito);* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 70px;
+}
+
+header .header-home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-home h1 {
