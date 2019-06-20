@@ -19,3 +19,9 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
 //BoolBnb
+
+@mixin flex-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
