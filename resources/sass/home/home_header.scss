@@ -1,6 +1,9 @@
 
 header {
-  h1 {
-    color: lightgreen;
+  height: 70px;
+
+  .header-home{
+    height: 100%;
+    @include flex-centered
   }
 }
