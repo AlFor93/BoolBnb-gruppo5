@@ -1,14 +1,14 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('BoolBnb');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/BoolBnB' , 'BoolHomeController@index')->name('BoolHome');
+Route::get('/' , 'BoolHomeController@index')->name('BoolHome');
 
-Route::get('/BoolBnB/Flats' , 'BoolFlatsController@index')->name('BoolFlats');
+Route::get('/flat' , 'BoolFlatsController@index')->name('BoolFlats');
