@@ -8,7 +8,7 @@ class Sponsor extends Model
 {
   protected $fillable = [
     'type' ,
-    'price'
+    'sponsor_price'
   ];
 
   function flats() {
