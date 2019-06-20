@@ -20,12 +20,12 @@
 .header-home .header-searchbar {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 40%;
 }
 
 .header-home .header-searchbar .logo {
-  width: 50px;
-  margin: 0 40px;
+  width: 40px;
+  margin: 0 20px;
 }
 
 .header-home .header-searchbar input {
