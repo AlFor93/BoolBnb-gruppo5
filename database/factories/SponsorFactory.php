@@ -9,6 +9,6 @@ $factory->define(App\Sponsor::class, function (Faker $faker) {
     return [
 
         'type',
-        'price'
+        'sponsor_price'
     ];
 });

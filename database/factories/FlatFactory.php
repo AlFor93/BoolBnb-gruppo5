@@ -11,6 +11,6 @@ $factory->define(App\Flat::class, function (Faker $faker) {
         'number_of_rooms' => $faker->numberBetween(1,5),
         'mq' => $faker->numberBetween(50,100),
         'address' => $faker->address,
-        'price' =>$faker->numberBetween(20, 200),
+        'flat_price' =>$faker->numberBetween(20, 200),
     ];
 });

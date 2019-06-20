@@ -11,13 +11,47 @@
   padding: 10px;
 }
 
+.header-home .login-link {
+  text-decoration: none;
+  color: grey;
+  margin: 5px;
+}
+
 .header-home .header-searchbar {
   display: flex;
   align-items: center;
+  width: 50%;
 }
 
 .header-home .header-searchbar .logo {
   width: 50px;
+  margin: 0 40px;
+}
+
+.header-home .header-searchbar input {
+  width: 100%;
+  min-width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 0.5px lightgrey solid;
+  box-shadow: 5px 5px 5px 5px rgba(184, 184, 184, 0.66);
+  padding: 0 25px;
+}
+
+.header-home .header-searchbar .searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.header-home .header-searchbar .fa-search {
+  position: absolute;
+  left: 5px;
+  color: grey;
+  font-size: 120%;
 }
 
 .header-home .login-form {

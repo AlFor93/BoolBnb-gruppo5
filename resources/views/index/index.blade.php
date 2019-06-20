@@ -13,37 +13,40 @@
     <header class="header-home">
       <div class="header-searchbar">
         <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
-        <input type="text" name="" value="">
+        <div class="searchbar">
+          <input type="text" name="" value="">
+          <i class="fas fa-search"></i>
+        </div>
+
       </div>
       <div class="login-form">
-        @if (Route::has('login'))
+        {{-- @if (Route::has('login'))
             <div class="top-right links">
                 @auth
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a class="login-link" href="{{ url('/home') }}">Home</a>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
+                    <a class="login-link" href="{{ route('login') }}">Login</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
+                        <a class="login-link" href="{{ route('register') }}">Register</a>
                     @endif
                 @endauth
             </div>
-        @endif
+        @endif --}}
         <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
             @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
+
+                    <a class="login-link" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+
                 @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
+
+                        <a class="login-link" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+
                 @endif
             @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                    <a class="login-link" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
@@ -58,9 +61,8 @@
                             @csrf
                         </form>
                     </div>
-                </li>
+
             @endguest
-        </ul>
       </div>
 
 
