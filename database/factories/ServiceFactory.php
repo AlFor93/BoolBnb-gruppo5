@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Service::class, function (Faker $faker) {
 
       return [
-          'name' => $faker->name,
-          'description' => $faker->sentence(20)
+        'name'=>$faker->unique->word(1)
+
     ];
 });
