@@ -12,15 +12,19 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        //
-        factory(App\Image::class,30)->make()->each(function($image){
+      $flats=Flat::all();
 
-          $flat = App\Flat::inRandomOrder()->first();
+        foreach ($flats as $flat) {
 
-          $image-> flat()-> associate($flat);
-          $image->save();
-            
-        });
+          factory(App\Image::class,rand(1,5))->make()->each(function($image)use($flat){
+
+            $image-> flat()-> associate($flat);
+            $image->save();
+          });
+        }
+
+
+
 
     }
 }
