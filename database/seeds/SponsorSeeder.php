@@ -14,16 +14,16 @@ class SponsorSeeder extends Seeder
     {
       Sponsor::insert([
           'type' => '24 ore',
-          'price' => '2.99'
+          'sponsor_price' => '2.99'
       ]);
       Sponsor::insert([
           'type' => '72 ore',
-          'price' => '5.99'
+          'sponsor_price' => '5.99'
 
       ]);
       Sponsor::insert([
           'type' => '168 ore',
-          'price' => '12.99'
+          'sponsor_price' => '12.99'
 
       ]);
     }

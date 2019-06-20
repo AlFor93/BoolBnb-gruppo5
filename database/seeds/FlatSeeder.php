@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Sponsor;
 
 class FlatSeeder extends Seeder
 {
@@ -24,6 +25,14 @@ class FlatSeeder extends Seeder
 
                     $services= App\Service::inRandomOrder()->take(rand(1,5))->get();
                     $flat->services()->attach($services);
+
+                    $random=rand(0,1);
+                    if ($random) {
+                      $sponsor=Sponsor::inRandomOrder()->first();
+                      $flat->sponsors()->attach($sponsor);
+                
+                    }
+
 
 
                   });

@@ -11,7 +11,7 @@ class Flat extends Model
     'number_of_rooms' ,
     'mq' ,
     'address',
-    'price'
+    'flat_price'
   ];
 
   function user() {
