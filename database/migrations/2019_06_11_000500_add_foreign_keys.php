@@ -20,10 +20,8 @@ class AddForeignKeys extends Migration
 
       });
 
-
-
       Schema::table('flat_service', function (Blueprint $table){
-        $table->foreign('flat_id' , 'flat')
+        $table->foreign('flat_id' , 'flatS')
               ->references('id')
               ->on('flats');
 
@@ -32,13 +30,20 @@ class AddForeignKeys extends Migration
               ->on('services');
       });
 
+
       Schema::table('images', function (Blueprint $table){
 
-        $table->foreign('flat_id' , 'flat2')
+        $table->foreign('flat_id' , 'flatI')
               ->references('id')
               ->on('flats');
       });
 
+      Schema::table('messages', function (Blueprint $table){
+
+        $table->foreign('flat_id' , 'flatM')
+        ->references('id')
+        ->on('flats');
+      });
     }
 
     /**

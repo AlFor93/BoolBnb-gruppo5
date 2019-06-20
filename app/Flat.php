@@ -27,4 +27,8 @@ class Flat extends Model
     return $this->hasMany(Image::class);
   }
 
+  function messages() {
+    return $this->hasMany(Message::class);
+  }
+
 }

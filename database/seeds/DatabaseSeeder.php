@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         UserSeeder::class,
         ServiceSeeder::class,
         FlatSeeder::class,
-        ImageSeeder::class
+        ImageSeeder::class,
+        MessageSeeder::class
 
     ]);
     }

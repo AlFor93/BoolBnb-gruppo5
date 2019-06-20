@@ -13,11 +13,13 @@ class ImageSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\Image::class,20)->make()->each(function($image){
+        factory(App\Image::class,30)->make()->each(function($image){
 
           $flat = App\Flat::inRandomOrder()->first();
+
           $image-> flat()-> associate($flat);
           $image->save();
+            
         });
 
     }

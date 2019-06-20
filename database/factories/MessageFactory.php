@@ -5,8 +5,10 @@
 use App\Model;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Message::class, function (Faker $faker) {
     return [
-        //
+
+      'title' =>$faker ->word(3),
+      'content' =>$faker -> sentence()
     ];
 });

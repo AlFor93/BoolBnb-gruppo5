@@ -11,6 +11,13 @@ class MessageSeeder extends Seeder
      */
     public function run()
     {
-        //
+      factory(App\Message::class,30)->make()->each(function($message){
+
+        $flat = App\Flat::inRandomOrder()->first();
+
+        $message-> flat()-> associate($flat);
+        $message->save();
+
+      });
     }
 }
