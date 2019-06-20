@@ -10,7 +10,8 @@ class Flat extends Model
     'name' ,
     'number_of_rooms' ,
     'mq' ,
-    'address'
+    'address',
+    'price'
   ];
 
   function user() {
@@ -29,6 +30,10 @@ class Flat extends Model
 
   function messages() {
     return $this->hasMany(Message::class);
+  }
+
+  function sponsors() {
+    return $this->belongsToMany(Sponsor::class);
   }
 
 }

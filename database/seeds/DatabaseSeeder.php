@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         UserSeeder::class,
         ServiceSeeder::class,
         FlatSeeder::class,
+        SponsorSeeder::class,
         ImageSeeder::class,
         MessageSeeder::class
 

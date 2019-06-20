@@ -44,6 +44,16 @@ class AddForeignKeys extends Migration
         ->references('id')
         ->on('flats');
       });
+
+      Schema::table('flat_sponsor', function (Blueprint $table){
+        $table->foreign('flat_id' , 'flatSp')
+              ->references('id')
+              ->on('flats');
+
+        $table->foreign('sponsor_id' , 'sponsor')
+              ->references('id')
+              ->on('sponsors');
+      });
     }
 
     /**
