@@ -10,8 +10,12 @@
   </head>
   <body>
 
-    <header class="">
-      <div class="header-home">
+    <header class="header-home">
+      <div class="header-searchbar">
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
+        <input type="text" name="" value="">
+      </div>
+      <div class="login-form">
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth

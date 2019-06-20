@@ -1,9 +1,19 @@
 
-header {
-  height: 70px;
+.header-home {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 
-  .header-home{
+  .header-searchbar{
+    .logo{
+      width: 50px;
+    }
+  }
+
+  .login-form{
     height: 100%;
     @include flex-centered
   }
+
 }
