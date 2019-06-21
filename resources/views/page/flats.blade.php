@@ -27,7 +27,6 @@
         {{-- Top left second container --}}
         <div class="top">
           <div class="info">
-
             <h1>Flat/Apartment name, Location</h1>
             <p>Location</p>
           </div>
