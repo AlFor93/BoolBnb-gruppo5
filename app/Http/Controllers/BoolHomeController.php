@@ -34,6 +34,8 @@ class BoolHomeController extends Controller
       //   return $finded;
       // }
 
+      
+
   }
 
   
