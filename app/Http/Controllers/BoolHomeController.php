@@ -21,11 +21,25 @@ class BoolHomeController extends Controller
                 ->get();
 
       return view('page.home',compact('flats'));
-      // dd($flats);
+      // function isPresent($elem,$flats)
+      // {
+      //   $finded=false;
+      //   for ($i=0; $i < count($flats) ; $i++) {
+      //
+      //     if ($elem==$flats[$i]) {
+      //
+      //       $finded=true;
+      //     }
+      //   }
+      //   return $finded;
+      // }
 
   }
-}
 
-//
-// SELECT * FROM flats
-// JOIN flat_sponsor ON flats.id=flat_sponsor.flat_id
+  
+
+
+
+
+
+}
