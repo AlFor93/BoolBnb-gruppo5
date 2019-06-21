@@ -28,7 +28,7 @@
         <div class="top">
           <div class="info">
 
-            <h1>Flat/Apartment name, Location</h1>
+            <h1>{{$flat->name}} , {{$flat->address}}</h1>
             <p>Location</p>
           </div>
           <div class="user">
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="right">
-        <h1>da togliere</h1>
+        
       </div>
     </div>
 
