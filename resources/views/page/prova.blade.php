@@ -79,7 +79,9 @@
         </div>
       </div>
       <div class="right">
-        
+        <ol>
+          @foreach($flatService as )
+        </ol>
       </div>
     </div>
 
