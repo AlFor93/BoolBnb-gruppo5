@@ -20,9 +20,13 @@ class BoolHomeController extends Controller
                 ->join('images','flats.id','=','images.flat_id')
                 ->get();
 
+<<<<<<< HEAD
                 dd($flats);
 
       // return view('page.home',compact('flats'));
+=======
+      return view('page.home',compact('flats'));
+>>>>>>> parent of f2245ec... a bomba
       // function isPresent($elem,$flats)
       // {
       //   $finded=false;
@@ -36,11 +40,20 @@ class BoolHomeController extends Controller
       //   return $finded;
       // }
 
+<<<<<<< HEAD
 
 
   }
 
 
+
+=======
+      
+
+  }
+
+  
+>>>>>>> parent of f2245ec... a bomba
 
 
 
