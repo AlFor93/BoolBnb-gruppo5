@@ -20,7 +20,9 @@ class BoolHomeController extends Controller
                 ->join('images','flats.id','=','images.flat_id')
                 ->get();
 
-      return view('page.home',compact('flats'));
+                dd($flats);
+
+      // return view('page.home',compact('flats'));
       // function isPresent($elem,$flats)
       // {
       //   $finded=false;
