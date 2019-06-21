@@ -17,6 +17,7 @@
     <title>BoolBnb Flat</title>
   </head>
   <body>
+    <h1>hallo</h1>
 
     @yield('content')
 
