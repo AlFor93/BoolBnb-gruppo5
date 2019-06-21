@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="right">
-        <h1>da togliere</h1>
+        
       </div>
     </div>
 
