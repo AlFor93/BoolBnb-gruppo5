@@ -20,7 +20,19 @@
 
       </div>
       <div class="login-form">
-      
+        {{-- @if (Route::has('login'))
+            <div class="top-right links">
+                @auth
+                    <a class="login-link" href="{{ url('/home') }}">Home</a>
+                @else
+                    <a class="login-link" href="{{ route('login') }}">Login</a>
+
+                    @if (Route::has('register'))
+                        <a class="login-link" href="{{ route('register') }}">Register</a>
+                    @endif
+                @endauth
+            </div>
+        @endif --}}
         <!-- Right Side Of Navbar -->
             <!-- Authentication Links -->
             @guest
