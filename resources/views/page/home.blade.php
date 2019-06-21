@@ -6,6 +6,7 @@
 
   <div class="main-home">
     <h1>questo è il corpo</h1>
+    <h1>secondo corpo</h1>
   </div>
 
   @foreach($flats as $flat)
