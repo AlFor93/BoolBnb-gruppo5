@@ -23,6 +23,8 @@ class BoolHomeController extends Controller
       return view('page.home',compact('flats'));
       // dd($flats);
 
+      
+
   }
 }
 
