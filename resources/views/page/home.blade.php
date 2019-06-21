@@ -13,9 +13,13 @@
       <div class="flats">
 
 
-        <h1>{{$flat->name}} {{$flat->address}}</h1><br>
+        <h1><a href="{{route('show.flat',$flat->id)}}">{{$flat->name}}</a> {{$flat->address}}</h1><br>
         <div class="">
-          <img src="{{$flat->img_file}}" alt="">
+          @foreach($images as $image)
+            @if($flat->flat_id==$image->flat_id)
+              <img src="{{$image->img_file}}" alt="">
+            @endif
+          @endforeach
         </div>
 
       </div>

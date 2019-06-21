@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 // use App\Http\Controller\BoolHomeController;
 use Illuminate\Support\Facades\DB;
 use App\Flat;
+use App\Image;
 
 
 class BoolHomeController extends Controller
@@ -13,28 +14,14 @@ class BoolHomeController extends Controller
 
   public function index()
   {
-      // $spFlats=Flat::has('created_at')->take(6)->get();
+    $images=Image::all();
 
       $flats=DB::table('flats')
                 ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
-                ->join('images','flats.id','=','images.flat_id')
                 ->get();
 
-                dd($flats);
-
-      // return view('page.home',compact('flats'));
-      // function isPresent($elem,$flats)
-      // {
-      //   $finded=false;
-      //   for ($i=0; $i < count($flats) ; $i++) {
-      //
-      //     if ($elem==$flats[$i]) {
-      //
-      //       $finded=true;
-      //     }
-      //   }
-      //   return $finded;
-      // }
+      return view('page.home',compact('flats','images'));
+      // dd($flats);
 
 
 
