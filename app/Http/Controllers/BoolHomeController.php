@@ -21,9 +21,13 @@ class BoolHomeController extends Controller
                 ->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 dd($flats);
 
       // return view('page.home',compact('flats'));
+=======
+      return view('page.home',compact('flats'));
+>>>>>>> parent of f2245ec... a bomba
 =======
       return view('page.home',compact('flats'));
 >>>>>>> parent of f2245ec... a bomba
@@ -41,6 +45,7 @@ class BoolHomeController extends Controller
       // }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   }
@@ -52,8 +57,15 @@ class BoolHomeController extends Controller
 
   }
 
+=======
+      
+
+  }
+
+>>>>>>> parent of f2245ec... a bomba
   
 >>>>>>> parent of f2245ec... a bomba
+
 
 
 

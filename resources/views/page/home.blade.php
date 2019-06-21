@@ -12,6 +12,7 @@
 
       <div class="flats">
 <<<<<<< HEAD
+<<<<<<< HEAD
         @foreach ($flat as $data)
           {{-- <h1>{{$data->name}} {{$data->address}}</h1><br> --}}
           {{$data}}
@@ -21,6 +22,8 @@
           </div>
         @endforeach
 =======
+=======
+>>>>>>> parent of f2245ec... a bomba
         <h1>{{$flat->name}} {{$flat->address}}</h1><br>
         <div class="">
           <img src="{{$flat->img_file}}" alt="">
