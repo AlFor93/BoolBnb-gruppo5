@@ -11,12 +11,16 @@
   @foreach($flats as $flat)
 
       <div class="flats">
-        <h1>{{$flat->name}} {{$flat->address}}</h1><br>
-        <div class="">
-          <img src="{{$flat->img_file}}" alt="">
-        </div>
-      </div>
+        @foreach ($flat as $data)
+          {{-- <h1>{{$data->name}} {{$data->address}}</h1><br> --}}
+          {{$data}}
+          <div class="">
 
+            {{-- <img src="{{$data->img_file}}" alt=""> --}}
+          </div>
+        @endforeach
+
+      </div>
 
   @endforeach
 @stop
