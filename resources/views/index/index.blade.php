@@ -12,7 +12,9 @@
 
     <header class="header-home">
       <div class="header-searchbar">
-        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
+        <a href="{{route('BoolHome')}}">
+          <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
+        </a>
         <div class="searchbar">
           <input type="text" name="" value="">
           <i class="fas fa-search"></i>

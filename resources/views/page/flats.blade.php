@@ -27,14 +27,14 @@
         {{-- Top left second container --}}
         <div class="top">
           <div class="info">
-            <h1>Flat/Apartment name, Location</h1>
-            <p>Location</p>
+            <h1>{{$flat[0]->flat_name}}</h1>
+            <p>{{$flat[0]->address}}</p>
           </div>
           <div class="user">
             <div class="photo">
 
             </div>
-            <span>username</span>
+            <span>{{$flat[0]->name}} {{$flat[0]->lastname}}</span>
           </div>
         </div>
         {{-- Center left second container --}}
@@ -78,7 +78,14 @@
         </div>
       </div>
       <div class="right">
-        <h1>da togliere</h1>
+        <ol>
+          @foreach($services as $service)
+            <li>{{$service->name}}</li>
+          @endforeach
+        </ol>
+        @foreach($images as $image)
+          <img src="{{$image->img_file}}" alt="">
+        @endforeach
       </div>
     </div>
 
