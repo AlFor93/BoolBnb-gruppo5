@@ -7,17 +7,10 @@
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
 
-// Home style
-@import 'home/home_header.scss';
-@import 'home/home_content.scss';
-@import 'home/home_footer.scss';
-
-// Flats search style
-@import 'flats/flats_header.scss';
-@import 'flats/flats_content.scss';
-@import 'flats/flats_footer.scss';
-
-// Flat info style
-@import 'flat/flat_header.scss';
-@import 'flat/flat_content.scss';
-@import 'flat/flat_footer.scss';
+// BoolBnB style
+@import 'content/header.scss';
+@import 'content/footer.scss';
+@import 'content/home_content.scss';
+@import 'content/register.scss';
+@import 'content/flats_content.scss';
+@import 'content/flat_content.scss';

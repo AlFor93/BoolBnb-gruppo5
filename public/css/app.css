@@ -61,24 +61,17 @@
   justify-content: center;
 }
 
+footer h1 {
+  color: blue;
+}
+
 .main-home h1 {
   color: green;
 }
 
-footer h1 {
-  color: blue;
-}
-
-header h1 {
-  color: lightgreen;
-}
-
-footer h1 {
-  color: blue;
-}
-
-header h1 {
-  color: lightgreen;
+.main-register {
+  width: 100vw;
+  background: lightgray;
 }
 
 .main-flat .first-container {
@@ -246,9 +239,5 @@ header h1 {
 .main-flat .test-container {
   width: 100vw;
   height: 1000px;
-}
-
-footer h1 {
-  color: blue;
 }
 
