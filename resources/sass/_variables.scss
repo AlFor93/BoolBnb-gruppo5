@@ -26,6 +26,25 @@ $boolRed: #FF5A5F;
   justify-content: center;
 }
 
+@mixin loginRegisterButton {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: $boolRed;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+@mixin blueAnchor {
+  color: $boolBlue;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 *{
   box-sizing: border-box;
   margin: 0;

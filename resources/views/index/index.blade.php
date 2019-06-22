@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <script src="{{ mix('/js/app.js') }}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>BoolBnb Home</title>
+    <title>BoolBnb</title>
   </head>
   <body>
 
@@ -73,7 +73,7 @@
     @yield('content')
 
     <footer class="footer">
-      
+
     </footer>
   </body>
 </html>

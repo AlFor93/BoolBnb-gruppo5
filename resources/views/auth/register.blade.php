@@ -8,7 +8,7 @@
           {{-- Name input  --}}
           <input id="name" placeholder="Nome" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-          @error('name')onblur="this.placeholder = 'enter your text'"
+          @error('name')
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
               </span>
@@ -50,11 +50,12 @@
               <p>Per registrarti devi aver compiuto almeno 18 anni. La data del tuo compleanno non sarà visibile per altre persone.</p>
               <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"autocomplete="date_of_birth" autofocus>
 
-              {{-- @error('date_of_birth')
+              @error('date_of_birth')
                   <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
-              @enderror --}}
+              @enderror
+
               <p>Ti invieremo via email promozioni, offerte speciali, suggerimenti e aggiornamenti dei nostri termini.</p>
             </div>
 
