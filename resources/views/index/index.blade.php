@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <header class="header-home">
+    <header class="header">
       <div class="header-searchbar">
         <a href="{{route('BoolHome')}}">
           <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
@@ -72,8 +72,8 @@
 
     @yield('content')
 
-    <footer>
-      <h1>questo è il footer</h1>
+    <footer class="footer">
+      
     </footer>
   </body>
 </html>

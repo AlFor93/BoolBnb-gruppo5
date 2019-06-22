@@ -4,31 +4,31 @@
   padding: 0;
 }
 
-.header-home {
+.header {
   height: 100px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
-.header-home .login-link {
+.header .login-link {
   text-decoration: none;
   color: grey;
   margin: 5px;
 }
 
-.header-home .header-searchbar {
+.header .header-searchbar {
   display: flex;
   align-items: center;
   width: 40%;
 }
 
-.header-home .header-searchbar .logo {
+.header .header-searchbar .logo {
   width: 40px;
   margin: 0 20px;
 }
 
-.header-home .header-searchbar input {
+.header .header-searchbar input {
   width: 100%;
   min-width: 130px;
   height: 40px;
@@ -39,7 +39,7 @@
   padding: 0 25px;
 }
 
-.header-home .header-searchbar .searchbar {
+.header .header-searchbar .searchbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,22 +47,24 @@
   width: 100%;
 }
 
-.header-home .header-searchbar .fa-search {
+.header .header-searchbar .fa-search {
   position: absolute;
   left: 5px;
   color: grey;
   font-size: 120%;
 }
 
-.header-home .login-form {
+.header .login-form {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-footer h1 {
-  color: blue;
+.footer {
+  width: 100vw;
+  height: 500px;
+  background: lightgray;
 }
 
 .main-home h1 {
@@ -71,7 +73,87 @@ footer h1 {
 
 .main-register {
   width: 100vw;
-  background: lightgray;
+  height: 800px;
+}
+
+.main-register .register-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-register .register-form #name,
+.main-register .register-form #lastname,
+.main-register .register-form #email,
+.main-register .register-form #password,
+.main-register .register-form #password-confirm,
+.main-register .register-form #date_of_birth {
+  width: 500px;
+  height: 45px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.main-register .register-form #name:focus,
+.main-register .register-form #lastname:focus,
+.main-register .register-form #email:focus,
+.main-register .register-form #password:focus,
+.main-register .register-form #password-confirm:focus,
+.main-register .register-form #date_of_birth:focus {
+  border: 1px solid #008489;
+}
+
+.main-register .register-form .date_of_birth {
+  width: 500px;
+}
+
+.main-register .register-form .date_of_birth h4 {
+  color: #484848;
+}
+
+.main-register .register-form .date_of_birth p {
+  color: #484848;
+  margin: 10px 0;
+}
+
+.main-register .register-form .fake_row {
+  width: 500px;
+  height: 1px;
+  background-color: #EBEBEB;
+}
+
+.main-register .register-form button {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  border: none;
+  border-radius: 5px;
+}
+
+.main-register .register-form .already_registered {
+  width: 500px;
+}
+
+.main-register .register-form .already_registered p {
+  display: inline;
+  color: #484848;
+  font-size: 16px;
+}
+
+.main-register .register-form .already_registered a {
+  color: #008489;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .main-flat .first-container {
