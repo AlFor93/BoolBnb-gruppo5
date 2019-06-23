@@ -17,7 +17,7 @@ class FlatController extends Controller
       // FROM flats
       // JOIN users on flats.user_id = users.id
       //
-      // $flat=Flat::findOrFail($id);
+      // $flat=Flat::findOrFail($id) ;
 
       $flat=DB::table('flats')
                 ->join('users','flats.user_id','=','users.id')

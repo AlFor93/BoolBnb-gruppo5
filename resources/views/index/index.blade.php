@@ -22,19 +22,6 @@
 
       </div>
       <div class="login-form">
-        {{-- @if (Route::has('login'))
-            <div class="top-right links">
-                @auth
-                    <a class="login-link" href="{{ url('/home') }}">Home</a>
-                @else
-                    <a class="login-link" href="{{ route('login') }}">Login</a>
-
-                    @if (Route::has('register'))
-                        <a class="login-link" href="{{ route('register') }}">Register</a>
-                    @endif
-                @endauth
-            </div>
-        @endif --}}
         <!-- Right Side Of Navbar -->
             <!-- Authentication Links -->
             @guest
@@ -43,12 +30,12 @@
 
                 @if (Route::has('register'))
 
-                        <a class="login-link" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="login-link" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 
                 @endif
             @else
 
-                    <a class="login-link" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a class="login-link" id="navbarDropdown" href="{{ route('show.user') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
