@@ -72,7 +72,53 @@
 
     @yield('content')
 
-    <footer class="footer">
+    <footer>
+      <div class="footer">
+        <div class="footer-box">
+          <strong>BoolBnb</strong>
+          <p>Opportunità di Lavoro</p>
+          <p>Stampa</p>
+          <p>Condizioni</p>
+          <p>Aiuto</p>
+          <p>Diversità e appartenenza</p>
+          <p>Accessiblità</p>
+          <p>Informazioni di Contatto</p>
+        </div>
+        <div class="footer-box">
+          <strong>BoolBnb</strong>
+          <p>Opportunità di Lavoro</p>
+          <p>Stampa</p>
+          <p>Condizioni</p>
+          <p>Aiuto</p>
+          <p>Diversità e appartenenza</p>
+          <p>Accessiblità</p>
+          <p>Informazioni di Contatto</p>
+        </div>
+        <div class="footer-box">
+          <strong>BoolBnb</strong>
+          <p>Opportunità di Lavoro</p>
+          <p>Stampa</p>
+          <p>Condizioni</p>
+          <p>Aiuto</p>
+          <p>Diversità e appartenenza</p>
+          <p>Accessiblità</p>
+          <p>Informazioni di Contatto</p>
+        </div>
+        <div class="footer-box">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook-f"></i>
+          <p>Termini</p>
+          <p>Privacy</p>
+          <p>Mappa del sito</p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="footer-bottom">
+        <i class="fab fa-airbnb"></i>
+        <span>© 2019 Boolbnb, Inc. All rights reserved.</span>
+      </div>
 
     </footer>
   </body>

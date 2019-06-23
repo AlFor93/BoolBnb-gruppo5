@@ -61,10 +61,23 @@
   justify-content: center;
 }
 
-.footer {
+footer .footer {
   width: 100vw;
-  height: 500px;
-  background: lightgray;
+  height: 350px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px lightgrey solid;
+}
+
+footer .footer-box p {
+  margin: 10px 0;
+  color: grey;
+}
+
+footer hr {
+  margin: 20px;
 }
 
 .main-home .wrapper {
