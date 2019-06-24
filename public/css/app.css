@@ -443,3 +443,84 @@ footer hr {
   height: 1000px;
 }
 
+.main-UserInfo {
+  width: 100vw;
+  height: 800px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.main-UserInfo .saveFlat-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-UserInfo .saveFlat-form h1 {
+  color: #484848;
+}
+
+.main-UserInfo .saveFlat-form #flat_name,
+.main-UserInfo .saveFlat-form #number_of_rooms,
+.main-UserInfo .saveFlat-form #mq,
+.main-UserInfo .saveFlat-form #address,
+.main-UserInfo .saveFlat-form #flat_price {
+  width: 500px;
+  height: 45px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #484848;
+}
+
+.main-UserInfo .saveFlat-form #flat_name:focus,
+.main-UserInfo .saveFlat-form #number_of_rooms:focus,
+.main-UserInfo .saveFlat-form #mq:focus,
+.main-UserInfo .saveFlat-form #address:focus,
+.main-UserInfo .saveFlat-form #flat_price:focus {
+  border: 1px solid #008489;
+}
+
+.main-UserInfo .saveFlat-form .services {
+  width: 500px;
+}
+
+.main-UserInfo .saveFlat-form .services h3 {
+  color: #008489;
+  margin: 10px 0;
+}
+
+.main-UserInfo .saveFlat-form .services .service {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-UserInfo .saveFlat-form .services .service p {
+  font-size: 18px;
+  color: #484848;
+  margin: 0 10px 0 0;
+}
+
+.main-UserInfo .saveFlat-form .services .service p input {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.main-UserInfo .saveFlat-form button {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+

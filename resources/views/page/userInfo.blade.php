@@ -2,24 +2,27 @@
 
 @section('content')
 
-  <form action="{{ route('save.flat') }}" method="post">
-    @csrf
-    @method('POST')
-    <h2> Inserisci nuovo appartamento</h2>
-    <p><label for="flat_name">Nome appartamento</label> <input type="text" name="flat_name" placeholder="Nome appartamento" value=""></p>
-    <p><label for="number_of_rooms">Numero di stanze</label> <input type="text" name="number_of_rooms" placeholder="Numero di stanze" value=""></p>
-    <p><label for="mq">Superficie (mq)</label> <input type="text" name="mq" placeholder="Metri quadri" value=""></p>
-    <p><label for="address">Indirizzo</label> <input type="text" name="address" placeholder="indirizzo" value=""></p>
-    <p><label for="flat_price">Prezzo</label> <input type="text" name="flat_price" placeholder="prezzo" value=""></p>
-    <p>Di Quali servizi dispone l'appartamento? </p>
+  <div class="main-UserInfo">
+    <form class="saveFlat-form" action="{{ route('save.flat') }}" method="post">
+      @csrf
+      @method('POST')
 
-      @foreach ($services as $service)
-        <input type="checkbox" name="services[]" value="{{$service->id}}"> {{$service->name}} <br>
-      @endforeach
-    <button type="submit" >Aggiungi appartamento</button>
-
-  </form>
-
-
+      <h1>Creazione nuovo appartamento</h1>
+      <input id="flat_name" type="text" name="flat_name" placeholder="Nome appartamento" value="" autofocus>
+      <input id="number_of_rooms" type="text" name="number_of_rooms" placeholder="Numero di stanze" value="">
+      <input id="mq" type="text" name="mq" placeholder="Metri quadri" value="">
+      <input id="address" type="text" name="address" placeholder="Indirizzo" value="">
+      <input id="flat_price" type="text" name="flat_price" placeholder="Prezzo" value="">
+      <div class="services">
+        <h3>Servizi</h3>
+        <div class="service">
+          @foreach ($services as $service)
+            <p><input type="checkbox" name="services[]" value="{{$service->id}}">{{$service->name}}</p>
+          @endforeach
+        </div>
+      </div>
+      <button type="submit" >Aggiungi appartamento</button>
+    </form>
+  </div>
 
 @stop

@@ -9,13 +9,6 @@
 //     el: '#app',
 // });
 
-
-
-
-
-
-
-
 var $ = require('jquery');
 
 // Add flat info
@@ -33,16 +26,6 @@ function removeMoreFlatInfo() {
   $('.moreInfo > span').remove();
   $('.moreInfo').append('<span id="moreInfo">Leggi altre informazioni sullo spazio <i class="fas fa-angle-down"></i></span>')
 }
-
-// Handlebars test
-
-// function test() {
-//   var template = $("#showMoreInfo-template").html();
-//   var compiled = Handlebars.compile(template);
-//   var finalHTML = compiled();
-//   var container = $(".moreInfo");
-//   container.append(finalHTML);
-// }
 
 function init() {
   var doc = $(document);
