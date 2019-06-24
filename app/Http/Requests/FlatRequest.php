@@ -24,11 +24,13 @@ class FlatRequest extends FormRequest
     public function rules()
     {
         return [
-          'flat_name' => 'required',
-          'number_of_rooms' =>'required',
-          'mq' => "required",
-          'address' => "required",
-          'flat_price' => "required"
+          'flat_name' => '',
+          'number_of_rooms' =>'',
+          'mq' => '',
+          'address' => '',
+          'flat_price' => '',
+          'user_id' => '',
+          'services'=> ''
         ];
     }
 }

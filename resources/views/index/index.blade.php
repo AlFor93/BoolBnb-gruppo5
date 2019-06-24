@@ -35,7 +35,7 @@
                 @endif
             @else
 
-                    <a class="login-link" id="navbarDropdown" href="{{ route('show.user') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a class="login-link" id="navbarDropdown" href="{{ route('show.user', Auth::user()->id) }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
