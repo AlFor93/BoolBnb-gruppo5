@@ -10,8 +10,6 @@ use App\Flat;
 use App\Service;
 use App\User;
 
-// use DB;
-// use App\Auth;
 
 class HomeController extends Controller
 {
@@ -49,8 +47,6 @@ class HomeController extends Controller
 
       $validatedData = $request->validated();
 
-
-
       $flat = new Flat;
 
       //Inserimento valori validati
@@ -71,15 +67,9 @@ class HomeController extends Controller
       $services=Service::find($serviceId);
 
       $flat->services()->attach($services);
-      
 
       return redirect('/');
 
-
-      // $servicesId = $validatedData['services'];
-      // $services = Service::find($servicesId);
-
-      // $flat->services()->associate($services);
 
     }
 

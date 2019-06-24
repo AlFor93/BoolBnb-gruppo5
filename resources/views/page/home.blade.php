@@ -25,12 +25,13 @@
 
       <div class="flats">
 
-
-        <h1><a href="{{route('show.flat',$flat->id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h1><br>
+        <h3><a href="{{route('show.flat',$flat->id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
         <div class="">
           @foreach($images as $image)
             @if($flat->flat_id==$image->flat_id)
-              <img src="{{$image->img_file}}" alt="">
+              <div class="">
+                <img src="{{$image->img_file}}" alt="">
+              </div>
             @endif
           @endforeach
         </div>

@@ -16,12 +16,19 @@ class BoolHomeController extends Controller
   {
     $images=Image::all();
 
-      $flats=DB::table('flats')
-                ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
-                ->get();
+    // SELECT * FROM images JOIN flats ON images.flat_id = flats.id WHERE images.flat_id = 4
 
-      return view('page.home',compact('flats','images'));
-      // dd($flats);
+    // $images = DB::table('images')
+    //           ->join ('flats','images.flat_id', '=', 'flats.id')
+    //           ->where('image.flat_id ', 'flats.id');
+    //           dd($images);
+
+    $flats=DB::table('flats')
+              ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
+              ->get();
+
+    return view('page.home',compact('flats','images'));
+    // dd($flats);
 
 
 
