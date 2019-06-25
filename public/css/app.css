@@ -99,6 +99,18 @@ footer hr {
   left: 100px;
 }
 
+.flats-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.flats-wrap .flat {
+  width: 30%;
+}
+
 .main-register {
   width: 100vw;
   height: 800px;

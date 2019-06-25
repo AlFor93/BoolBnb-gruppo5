@@ -14,7 +14,7 @@ class BoolHomeController extends Controller
 
   public function index()
   {
-    $images=Image::all();
+    $images=Image::all(); 
 
     // SELECT * FROM images JOIN flats ON images.flat_id = flats.id WHERE images.flat_id = 4
 

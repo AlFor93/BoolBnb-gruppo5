@@ -73,9 +73,9 @@ class AddForeignKeys extends Migration
       Schema::table('flat_sponsor' , function(Blueprint $table){
 
         $table->dropForeign('flatSp');
-        $table->dropColumn('flat_id')
+        $table->dropColumn('flat_id');
         $table->dropForeign('sponsor');
-        $table->dropColumn('sponsor_id')
+        $table->dropColumn('sponsor_id');
 
       });
 

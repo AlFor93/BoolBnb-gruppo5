@@ -32,8 +32,9 @@ class FlatController extends Controller
                 ->join('services','flat_service.service_id','=','services.id')
                 ->where('flat_id',$id)
                 ->get();
+
+
       return view('page.flats', compact('flat','images','services'));
-      // dd($images);
     }
 
 
