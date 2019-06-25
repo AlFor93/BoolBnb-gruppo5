@@ -7,6 +7,7 @@ use App\Flat;
 use App\Image;
 use App\Service;
 use App\User;
+use Auth;
 
 class FlatController extends Controller
 {
@@ -34,4 +35,6 @@ class FlatController extends Controller
       return view('page.flats', compact('flat','images','services'));
       // dd($images);
     }
+
+
 }

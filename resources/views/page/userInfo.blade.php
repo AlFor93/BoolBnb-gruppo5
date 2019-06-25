@@ -14,21 +14,31 @@
       <td>citta</td>
       <td>mq</td>
       <td>stanze</td>
-      <td>servizi</td>
+      <td>show detail</td>
+      <td>elimina</td>
+      <td>edit</td>
     </tr>
     @foreach($flats as $flat)
-      <tr>
-        <td>{{$flat->flat_name}}</td>
-        <td>{{$flat->address}}</td>
-        <td>{{$flat->city}}</td>
-        <td>{{$flat->mq}}</td>
-        <td>{{$flat->number_of_rooms}}</td>
-        <td>
-          @if($flat->flat_id)
-            {{$flat->name}}
-          @endif
-        </td>
-      </tr>
+
+          <tr>
+            <td>{{$flat->flat_name}}</td>
+            <td>{{$flat->address}}</td>
+            <td>{{$flat->city}}</td>
+            <td>{{$flat->mq}}</td>
+            <td>{{$flat->number_of_rooms}}</td>
+
+            <td><a href="{{route('show.graph',$flat->id)}}"><i class="fas fa-eye"></i></a></td>
+
+            <form class="" action="{{route('delete.flat',$flat->id)}}" method="post">
+              @csrf
+              @method('DELETE')
+                <td>
+
+                  <button class="del-butt" type="submit"><i class="fas fa-trash-alt"></i></button>
+                </td>
+            </form>
+
+          </tr>
     @endforeach
   </table>
 

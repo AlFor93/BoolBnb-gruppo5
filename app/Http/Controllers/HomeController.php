@@ -43,15 +43,15 @@ class HomeController extends Controller
       // JOIN flats ON flat_service.flat_id=flats.id
       // JOIN services ON flat_service.service_id=services.id
 
-      $inputAuthor= Auth::user()->id;
-      // $flats = Flat::where('user_id','=',$inputAuthor)->get();
-      $flats=DB::table('flat_service')
-                ->join('services','flat_service.service_id','=','services.id')
-                ->join('flats','flat_service.flat_id','=','flats.id')
-                ->where('flats.user_id',$inputAuthor)
-                ->get();
 
-                // dd($flats);
+      $inputAuthor= Auth::user()->id;
+      $flats = Flat::where('user_id','=',$inputAuthor)->get();
+      // $flats=DB::table('flat_service')
+      //           ->join('services','flat_service.service_id','=','services.id')
+      //           ->join('flats','flat_service.flat_id','=','flats.id')
+      //           ->where('flats.user_id',$inputAuthor)
+      //           ->get();
+
       return view('page.userInfo', compact('flats'));
     }
 
@@ -95,12 +95,5 @@ class HomeController extends Controller
       // dd($results);
     }
 
-    function addFlat()
-    {
-      $flats = Flat::all();
-      $services = Service::all();
-      $users = User::all();
-      return view('page.addFlat' , compact('flats', 'services' , 'users'));
-    }
 
 }
