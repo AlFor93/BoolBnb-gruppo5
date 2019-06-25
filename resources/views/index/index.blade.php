@@ -33,7 +33,7 @@
               @endif
 
             @else
-                  <a class="login-link" id="navbarDropdown" href="{{ route('show.user', Auth::user()->id) }}" role="button" data-toggle="dropdown">
+                  <a class="login-link" id="navbarDropdown" href="{{ route('show.user', Auth::user()->name) }}" role="button" data-toggle="dropdown">
                       {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 

@@ -9,6 +9,7 @@ use Auth;
 use App\Flat;
 use App\Service;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 
 class HomeController extends Controller
@@ -34,13 +35,24 @@ class HomeController extends Controller
     }
 
 
-    function createNewFlat(){
+    function showProfile(){
 
-      $flats = Flat::all();
-      $services = Service::all();
-      $users = User::all();
+      // SELECT flats.flat_name,flats.number_of_rooms,flats.mq,flats.flat_price,
+      // flats.user_id,services.name
+      // FROM flat_service
+      // JOIN flats ON flat_service.flat_id=flats.id
+      // JOIN services ON flat_service.service_id=services.id
 
-      return view('page.userInfo', compact('flats','services','users'));
+      $inputAuthor= Auth::user()->id;
+      // $flats = Flat::where('user_id','=',$inputAuthor)->get();
+      $flats=DB::table('flat_service')
+                ->join('services','flat_service.service_id','=','services.id')
+                ->join('flats','flat_service.flat_id','=','flats.id')
+                ->where('flats.user_id',$inputAuthor)
+                ->get();
+
+                // dd($flats);
+      return view('page.userInfo', compact('flats'));
     }
 
     function saveNewFlat(FlatRequest $request ){
@@ -57,10 +69,10 @@ class HomeController extends Controller
       $flat->city = $validatedData['city'];
       $flat->flat_price = $validatedData['flat_price'];
 
-      $inputAuthor= Auth::user()->name;
-      $user= User::where('name','=',$inputAuthor)->first();
-      $flat->user()->associate($user);
-
+      $inputAuthor= Auth::user()->id;
+      $user= User::where('id','=',$inputAuthor)->first();
+      // dd($user);
+      $flat->user()->associate($user->id);
       // Salva
       $flat->save();
 
@@ -69,7 +81,7 @@ class HomeController extends Controller
 
       $flat->services()->attach($services);
 
-      return redirect('/');
+      return redirect('/user/' . $user->name);
 
 
     }
@@ -81,6 +93,14 @@ class HomeController extends Controller
 
       return view('page.flatList', compact('flats'));
       // dd($results);
+    }
+
+    function addFlat()
+    {
+      $flats = Flat::all();
+      $services = Service::all();
+      $users = User::all();
+      return view('page.addFlat' , compact('flats', 'services' , 'users'));
     }
 
 }
