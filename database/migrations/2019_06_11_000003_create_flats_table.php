@@ -19,6 +19,7 @@ class CreateFlatsTable extends Migration
             $table->integer('number_of_rooms');
             $table->integer('mq');
             $table->string('address');
+            $table->string('city');
             $table->float('flat_price')->unsigned();
             $table->bigInteger('user_id')->unsigned()->index();
             $table->timestamps();

@@ -11,6 +11,7 @@ class Flat extends Model
     'number_of_rooms' ,
     'mq' ,
     'address',
+    'city',
     'flat_price'
   ];
 
