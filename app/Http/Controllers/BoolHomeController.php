@@ -14,7 +14,7 @@ class BoolHomeController extends Controller
 
   public function index()
   {
-    $images=Image::all(); 
+    $images=Image::all();
 
     // SELECT * FROM images JOIN flats ON images.flat_id = flats.id WHERE images.flat_id = 4
 
@@ -27,7 +27,13 @@ class BoolHomeController extends Controller
               ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
               ->get();
 
-    return view('page.home',compact('flats','images'));
+              // dd($flats);
+
+    $allFlats=Flat::all();
+
+    // dd($allFlats);
+
+    return view('page.home',compact('flats','images','allFlats'));
     // dd($flats);
 
 

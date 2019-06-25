@@ -35,10 +35,14 @@
               @endif
             @endforeach
           </div>
-          <h3><a href="{{route('show.flat',$flat->id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
+          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
 
 
         </div>
+    @endforeach
+
+    @foreach($allFlats as $oneFlat)
+      <h1>{{$oneFlat->flat_name}}</h1>
     @endforeach
   </div>
 

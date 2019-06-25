@@ -87,14 +87,14 @@
           <img src="{{$image->img_file}}" alt="">
         @endforeach
       </div>
-
+    
     </div>
 
 
 
 
     <div class="test-container">
-    
+
     </div>
   </div>
 
