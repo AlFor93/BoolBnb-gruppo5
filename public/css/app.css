@@ -467,6 +467,7 @@ footer hr {
 .main-UserInfo .saveFlat-form #number_of_rooms,
 .main-UserInfo .saveFlat-form #mq,
 .main-UserInfo .saveFlat-form #address,
+.main-UserInfo .saveFlat-form #city,
 .main-UserInfo .saveFlat-form #flat_price {
   width: 500px;
   height: 45px;
@@ -482,6 +483,7 @@ footer hr {
 .main-UserInfo .saveFlat-form #number_of_rooms:focus,
 .main-UserInfo .saveFlat-form #mq:focus,
 .main-UserInfo .saveFlat-form #address:focus,
+.main-UserInfo .saveFlat-form #city:focus,
 .main-UserInfo .saveFlat-form #flat_price:focus {
   border: 1px solid #008489;
 }

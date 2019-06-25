@@ -1,10 +1,11 @@
-
 @extends('index.index')
 
 @section('content')
 
+  @foreach($flats as $flat)
   <div class="">
-    <h1>prfilo</h1>
+    {{$flat->flat_name}}
   </div>
+  @endforeach
 
 @stop

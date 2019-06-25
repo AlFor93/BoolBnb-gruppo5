@@ -31,7 +31,7 @@ function removeMoreFlatInfo() {
 //   // Qui viene impostata una variabile che rappresenta un array. Rispettivamente ci sono la latitudine e la longitudine. Questi dati possono essere recuperati passando nell'url della show la query o in alternativa nascondendo i dati che ci servono da qualche parte e recuperandoli con jquery.
 //   var myCoordinates = [41.988270,12.655388];
 //   // Questo non è obbligatorio.
-//   // tomtom.setProductInfo('boolbnb', '1.0');
+//   tomtom.setProductInfo('boolbnb', '1.0');
 //   // Instanzio la variabile map che corrisponde alla mappa che verrà visualizzata. Da notare la chiave center a cui viene dato il valore che corrisponde alle nostre coordinate.
 //   var map= tomtom.L.map('map', {
 //     key: '8eQS47oSQQm5DqeKWfu8BAPht9hWBFSB',

@@ -21,6 +21,7 @@
     #number_of_rooms,
     #mq,
     #address,
+    #city,
     #flat_price {
       width: 500px;
       height: 45px;
@@ -36,6 +37,7 @@
     #number_of_rooms:focus,
     #mq:focus,
     #address:focus,
+    #city:focus,
     #flat_price:focus {
       border: 1px solid $boolBlue;
     }

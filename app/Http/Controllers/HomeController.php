@@ -54,6 +54,7 @@ class HomeController extends Controller
       $flat->number_of_rooms = $validatedData['number_of_rooms'];
       $flat->mq = $validatedData['mq'];
       $flat->address = $validatedData['address'];
+      $flat->city = $validatedData['city'];
       $flat->flat_price = $validatedData['flat_price'];
 
       $inputAuthor= Auth::user()->name;
@@ -71,6 +72,15 @@ class HomeController extends Controller
       return redirect('/');
 
 
+    }
+
+    function searchFlat()
+    {
+      $city=$_GET['city'];
+      $flats = Flat::where('city','LIKE','%'. $city .'%')->get();
+
+      return view('page.flatList', compact('flats'));
+      // dd($results);
     }
 
 }

@@ -28,6 +28,7 @@ class FlatRequest extends FormRequest
           'number_of_rooms' =>'',
           'mq' => '',
           'address' => '',
+          'city' => '',
           'flat_price' => '',
           'user_id' => '',
           'services'=> ''

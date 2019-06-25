@@ -15,10 +15,12 @@
         <a href="{{route('BoolHome')}}">
           <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkkmRZsjv6wH5v_xdl3D4a9N2EKaMUABeZAZu0S2hGha14pmaF" alt="">
         </a>
-        <div class="searchbar">
-          <input type="text" name="" value="">
+
+        <form class="searchbar" action="{{route('search.flat')}}" method="get">
+          <input type="text" name="city" value="">
           <i class="fas fa-search"></i>
-        </div>
+          <button type="submit" name="button">cerca</button>
+        </form>
 
       </div>
       <div class="login-form">
