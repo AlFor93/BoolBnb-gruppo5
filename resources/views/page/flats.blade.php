@@ -28,7 +28,8 @@
         <div class="top">
           <div class="info">
             <h1>{{$flat[0]->flat_name}}</h1>
-            <p>{{$flat[0]->address}}</p>
+            <p id="addressData">{{$flat[0]->address}}</p>
+            <p id="cityData">{{$flat[0]->city}}</p>
           </div>
           <div class="user">
             <div class="photo">
@@ -87,7 +88,7 @@
           <img src="{{$image->img_file}}" alt="">
         @endforeach
       </div>
-    
+
     </div>
 
 
@@ -96,6 +97,11 @@
     <div class="test-container">
 
     </div>
+
+    <div id="map" >
+    </div>
   </div>
+
+
 
 @stop

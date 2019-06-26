@@ -3,9 +3,10 @@
 @section('content')
 
   @foreach($flats as $flat)
-  <div class="">
+
+  <a href="{{ route('show.flat',$flat->id) }}">
     {{$flat->flat_name}}
-  </div>
+  </a>
   @endforeach
 
 @stop

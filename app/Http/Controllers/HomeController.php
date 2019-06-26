@@ -9,6 +9,8 @@ use Auth;
 use App\Flat;
 use App\Service;
 use App\User;
+use App\Image;
+
 use Illuminate\Support\Facades\DB;
 
 
@@ -29,10 +31,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('index');
-    }
+
+
+
+    // public function index()
+    // {
+    //     return view('index');
+    // }
 
 
     function showProfile(){
@@ -84,15 +89,6 @@ class HomeController extends Controller
       return redirect('/user/' . $user->name);
 
 
-    }
-
-    function searchFlat()
-    {
-      $city=$_GET['city'];
-      $flats = Flat::where('city','LIKE','%'. $city .'%')->get();
-
-      return view('page.flatList', compact('flats'));
-      // dd($results);
     }
 
 

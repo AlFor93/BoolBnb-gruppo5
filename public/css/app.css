@@ -108,7 +108,11 @@ footer hr {
 }
 
 .flats-wrap .flat {
-  width: 30%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main-register {
@@ -453,6 +457,11 @@ footer hr {
 .main-flat .test-container {
   width: 100vw;
   height: 1000px;
+}
+
+#map {
+  width: 600px;
+  height: 400px;
 }
 
 .main-UserInfo {

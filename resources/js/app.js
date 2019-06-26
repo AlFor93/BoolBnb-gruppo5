@@ -27,32 +27,62 @@ function removeMoreFlatInfo() {
   $('.moreInfo').append('<span id="moreInfo">Leggi altre informazioni sullo spazio <i class="fas fa-angle-down"></i></span>')
 }
 
-// function addMap() {
-//   // Qui viene impostata una variabile che rappresenta un array. Rispettivamente ci sono la latitudine e la longitudine. Questi dati possono essere recuperati passando nell'url della show la query o in alternativa nascondendo i dati che ci servono da qualche parte e recuperandoli con jquery.
-//   var myCoordinates = [41.988270,12.655388];
-//   // Questo non è obbligatorio.
-//   tomtom.setProductInfo('boolbnb', '1.0');
-//   // Instanzio la variabile map che corrisponde alla mappa che verrà visualizzata. Da notare la chiave center a cui viene dato il valore che corrisponde alle nostre coordinate.
-//   var map= tomtom.L.map('map', {
-//     key: '8eQS47oSQQm5DqeKWfu8BAPht9hWBFSB',
-//     source: 'vector',
-//     basePath: '/tomtom-sdk',
-//     center: myCoordinates,
-//     zoom: 16,
-//     language: "it-IT"
-//   });
-//   // Qui inserisco anche un marker che viene posizionato esattamente sull'abitazione.
-//   var marker = tomtom.L.marker(myCoordinates).addTo(map);
-//   marker.bindPopup('Appartamento').openPopup();
-// }
 
-$(document).ready(init);
+
+function getGeoData(){
+
+  var address = $('#addressData').text();
+  var city = $('#cityData').text();
+
+  $.ajax({
+
+    url: "https://api.tomtom.com/search/2/geocode/" + address+','+city + ".json?countrySet=IT&key=8eQS47oSQQm5DqeKWfu8BAPht9hWBFSB",
+    method: "GET",
+
+    success: function(data){
+
+      var coordinate = [];
+
+      var results = data.results;
+
+      var longitudine = results[0].position.lon;
+
+      var latitudine = results[0].position.lat;
+
+      coordinate.push(latitudine, longitudine);
+
+      geolocate(coordinate)
+
+    },
+    error: function(){}
+  });
+}
+
+function geolocate(arr){
+
+  var mymap = L.map('map').setView( arr, 13);
+  var marker = L.marker(arr).addTo(mymap);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+  		maxZoom: 18,
+
+  		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+  			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+  			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  		id: 'mapbox.streets'
+  	}).addTo(mymap);
+
+}
+
+
+
 
 function init() {
   var doc = $(document);
 
   doc.on('click', '#moreInfo', showMoreFlatInfo);
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
+
+  getGeoData();
 
 }
 

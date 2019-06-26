@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Sponsor;
+use App\Flat;
 
 class FlatSeeder extends Seeder
 {
@@ -11,12 +12,13 @@ class FlatSeeder extends Seeder
      * @return void
      */
     public function run()
+
     {
+
       factory(App\Flat::class,20)->make()->each(function($flat){
 
                     // quando abbiamo una chiave esterna prima bisogna creeare(make) poi fare il imap_savebody
                     // senza chiaVE ESTERNA SI PUO FARE DIRETTAMENTE IL CREATE()
-
 
                     $user= App\User::inRandomOrder()->first();
                     $flat->user()->associate($user);
@@ -30,7 +32,7 @@ class FlatSeeder extends Seeder
                     if ($random) {
                       $sponsor=Sponsor::inRandomOrder()->first();
                       $flat->sponsors()->attach($sponsor);
-                
+
                     }
 
 
