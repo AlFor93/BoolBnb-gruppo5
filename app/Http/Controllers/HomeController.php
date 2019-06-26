@@ -91,5 +91,22 @@ class HomeController extends Controller
 
     }
 
+    function updateFlat(FlatRequest $request ,$id)
+    {
+
+      $validateData=$request->validated();
+      // dd($request->all());
+      $flat=Flat::findOrFail($id);
+      $inputAuthor= Auth::user()->id;
+      $user= User::where('id','=',$inputAuthor)->first();
+
+      $flat->update($validateData);
+
+      $servicesId=$validateData['services'];
+      $services=Service::find($servicesId);
+      $flat->services()->sync($services);
+
+      return redirect('/user/'. $user->name);
+    }
 
 }

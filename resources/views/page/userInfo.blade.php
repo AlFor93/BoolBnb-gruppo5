@@ -16,7 +16,6 @@
       <td>stanze</td>
       <td>show detail</td>
       <td>elimina</td>
-      <td>edit</td>
     </tr>
     @foreach($flats as $flat)
 

@@ -32,12 +32,41 @@ class AdminController extends Controller
 
     $images=Image::where('flat_id',$id)->get();
 
-    $services=DB::table('flat_service')
+    $checkedServices=DB::table('flat_service')
               ->join('services','flat_service.service_id','=','services.id')
               ->where('flat_id',$id)
               ->get();
-    // dd($flat);
-    return view('page.graph', compact('flat','images','services'));
+
+    $allServices=Service::all();
+
+    // dd($allServices);
+
+    $allServId=[];
+
+    foreach ($allServices as $allService) {
+
+      // allservice di i
+      // dd($allService);
+
+      $nofind=true;
+
+      foreach ($checkedServices as $service) {
+
+        // dd($service->service_id);
+
+        if ($allService->id == $service->service_id) {
+          $nofind=false;
+        }
+      }
+
+      if ($nofind) {
+        $allServId[]=$allService;
+      }
+    }
+    // dd($allServId);
+
+
+    return view('page.graph', compact('flat','images','checkedServices','allServId'));
   }
 
   function deleteFlat($id)
