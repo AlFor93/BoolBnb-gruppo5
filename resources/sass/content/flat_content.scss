@@ -11,12 +11,11 @@
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      border: 1px solid $boolGray;
 
       .box {
         width: 50%;
         height: 50%;
-        // border-right: 1px solid $boolGray;
+        border: 1px solid white;
 
         img {
           width: 100%;
@@ -151,7 +150,11 @@
     .right {
       width: 40%;
       height: 100%;
-      // background: gray;
+      padding: 20px 50px;
+
+      #map {
+        margin-top: 20px;
+      }
     }
   }
 

@@ -47,7 +47,6 @@
             {{-- Date of birth input --}}
             <div class="date_of_birth">
               <h4>Data di nascita</h4>
-              <p>Per registrarti devi aver compiuto almeno 18 anni. La data del tuo compleanno non sarà visibile per altre persone.</p>
               <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"autocomplete="date_of_birth" autofocus>
 
               @error('date_of_birth')
@@ -56,7 +55,6 @@
                   </span>
               @enderror
 
-              <p>Ti invieremo via email promozioni, offerte speciali, suggerimenti e aggiornamenti dei nostri termini.</p>
             </div>
 
             {{-- Submit Button  --}}

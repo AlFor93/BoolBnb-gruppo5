@@ -67,25 +67,17 @@
           </div>
           <span>Contatta l'host</span>
         </div>
+        <h4>Servizi</h4>
+        @foreach($services as $service)
+          <li>{{$service->name}}</li>
+        @endforeach
       </div>
       <div class="right">
-        <ol>
-          @foreach($services as $service)
-            <li>{{$service->name}}</li>
-          @endforeach
-        </ol>
+        <h2>Ubicazione</h2>
+        <div id="map" >
+        </div>
       </div>
 
-    </div>
-
-
-
-
-    <div class="test-container">
-
-    </div>
-
-    <div id="map" >
     </div>
   </div>
 

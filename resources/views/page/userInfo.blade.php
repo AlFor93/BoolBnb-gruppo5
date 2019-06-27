@@ -4,7 +4,7 @@
 @section('content')
 
   <div class="">
-    <h1>prfilo</h1>
+    <h1>Profilo</h1>
   </div>
 
   <table>
@@ -14,7 +14,7 @@
       <td>citta</td>
       <td>mq</td>
       <td>stanze</td>
-      <td>show detail</td>
+      <td>show/edit detail</td>
       <td>elimina</td>
     </tr>
     @foreach($flats as $flat)

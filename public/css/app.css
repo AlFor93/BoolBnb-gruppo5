@@ -47,6 +47,19 @@
   width: 100%;
 }
 
+.header .header-searchbar .searchbar button {
+  width: 80px;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
 .header .header-searchbar .fa-search {
   position: absolute;
   left: 5px;
@@ -160,6 +173,7 @@ footer hr {
 
 .main-register .register-form .date_of_birth h4 {
   color: #484848;
+  margin-bottom: 20px;
 }
 
 .main-register .register-form .date_of_birth p {
@@ -303,12 +317,12 @@ footer hr {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #484848;
 }
 
 .main-flat .first-container .image-container .box {
   width: 50%;
   height: 50%;
+  border: 1px solid white;
 }
 
 .main-flat .first-container .image-container .box img {
@@ -436,6 +450,11 @@ footer hr {
 .main-flat .second-container .right {
   width: 40%;
   height: 100%;
+  padding: 20px 50px;
+}
+
+.main-flat .second-container .right #map {
+  margin-top: 20px;
 }
 
 .main-flat .test-container {
@@ -529,5 +548,101 @@ footer hr {
   outline: none;
   border: none;
   border-radius: 5px;
+}
+
+table {
+  width: 40%;
+  height: 50px;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.main-update {
+  width: 100vw;
+  height: 800px;
+}
+
+.main-update .update-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-update .update-form #flat_name,
+.main-update .update-form #number_of_rooms,
+.main-update .update-form #mq,
+.main-update .update-form #address,
+.main-update .update-form #city,
+.main-update .update-form #flat_price {
+  width: 500px;
+  height: 45px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #484848;
+}
+
+.main-update .update-form #flat_name:focus,
+.main-update .update-form #number_of_rooms:focus,
+.main-update .update-form #mq:focus,
+.main-update .update-form #address:focus,
+.main-update .update-form #city:focus,
+.main-update .update-form #flat_price:focus {
+  border: 1px solid #008489;
+}
+
+.main-update .update-form .date_of_birth {
+  width: 500px;
+}
+
+.main-update .update-form .date_of_birth h4 {
+  color: #484848;
+  margin-bottom: 20px;
+}
+
+.main-update .update-form .date_of_birth p {
+  color: #484848;
+  margin: 10px 0;
+}
+
+.main-update .update-form button {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.main-update .update-form .service {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-update .update-form .service p {
+  font-size: 18px;
+  color: #484848;
+  margin: 0 10px 0 0;
+}
+
+.main-update .update-form .service p input {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
 }
 
