@@ -9,7 +9,7 @@ $factory->define(App\Image::class, function (Faker $faker) {
     return [
 
         'filename' =>$faker ->word,
-        'img_file' =>$faker -> imageUrl(400, 250, 'people')
+        'img_file' =>$faker -> imageUrl(400, 250, 'city')
 
     ];
 });

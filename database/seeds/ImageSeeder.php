@@ -16,7 +16,7 @@ class ImageSeeder extends Seeder
 
         foreach ($flats as $flat) {
 
-          factory(App\Image::class,rand(1,5))->make()->each(function($image)use($flat){
+          factory(App\Image::class,4)->make()->each(function($image)use($flat){
 
             $image-> flat()-> associate($flat);
             $image->save();

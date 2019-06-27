@@ -4,22 +4,12 @@
 
   <div class="main-flat">
     <div class="first-container">
-      <div class="left">
-
-      </div>
-      <div class="right">
-        <div class="first box">
-
-        </div>
-        <div class="second box">
-
-        </div>
-        <div class="third box">
-
-        </div>
-        <div class="fourth box">
-
-        </div>
+      <div class="image-container">
+        @foreach($images as $image)
+          <div class="box">
+            <img src="{{$image->img_file}}" alt="">
+          </div>
+        @endforeach
       </div>
     </div>
     <div class="second-container">
@@ -84,9 +74,6 @@
             <li>{{$service->name}}</li>
           @endforeach
         </ol>
-        @foreach($images as $image)
-          <img src="{{$image->img_file}}" alt="">
-        @endforeach
       </div>
 
     </div>

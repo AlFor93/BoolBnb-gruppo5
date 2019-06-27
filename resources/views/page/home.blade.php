@@ -22,20 +22,21 @@
   </div>
 
   <div class="flats-wrap">
+
     @foreach($flats as $flat)
 
         <div class="flat">
 
           <div class="">
             {{-- @foreach($images as $image) --}}
-              {{-- @if($flat->flat_id == $image->flat_id) --}}
+              @if($flat->id == $flat->test)
                 <div class="">
-                  {{-- <img src="{{$image->img_file}}" alt=""> --}}
+                  <img src="{{$flat->img_file}}" alt="">
                 </div>
-              {{-- @endif --}}
+              @endif
             {{-- @endforeach --}}
           </div>
-          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
+          <h3><a href="{{route('show.flat',$flat->id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
 
 
         </div>
