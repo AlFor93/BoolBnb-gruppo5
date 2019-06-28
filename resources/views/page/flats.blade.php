@@ -4,22 +4,12 @@
 
   <div class="main-flat">
     <div class="first-container">
-      <div class="left">
-
-      </div>
-      <div class="right">
-        <div class="first box">
-
-        </div>
-        <div class="second box">
-
-        </div>
-        <div class="third box">
-
-        </div>
-        <div class="fourth box">
-
-        </div>
+      <div class="image-container">
+        @foreach($images as $image)
+          <div class="box">
+            <img src="{{$image->img_file}}" alt="">
+          </div>
+        @endforeach
       </div>
     </div>
     <div class="second-container">
@@ -77,28 +67,17 @@
           </div>
           <span>Contatta l'host</span>
         </div>
-      </div>
-      <div class="right">
-        <ol>
-          @foreach($services as $service)
-            <li>{{$service->name}}</li>
-          @endforeach
-        </ol>
-        @foreach($images as $image)
-          <img src="{{$image->img_file}}" alt="">
+        <h4>Servizi</h4>
+        @foreach($services as $service)
+          <li>{{$service->name}}</li>
         @endforeach
       </div>
+      <div class="right">
+        <h2>Ubicazione</h2>
+        <div id="map" >
+        </div>
+      </div>
 
-    </div>
-
-
-
-
-    <div class="test-container">
-
-    </div>
-
-    <div id="map" >
     </div>
   </div>
 

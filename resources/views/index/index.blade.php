@@ -28,7 +28,7 @@
         <form class="searchbar" action="{{route('search.flat')}}" method="get">
           <input type="text" name="city" value="">
           <i class="fas fa-search"></i>
-          <button type="submit" name="button">cerca</button>
+          <button type="submit" name="button">Cerca</button>
         </form>
 
       </div>

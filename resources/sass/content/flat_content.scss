@@ -6,37 +6,21 @@
     height: 590px;
     display: flex;
 
-    .left {
-      width: 50%;
-      height: 100%;
-      border: 1px solid $boolGray;
-    }
-
-    .right {
-      width: 50%;
+    .image-container {
+      width: 100%;
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      border-top: 1px solid $boolGray;
-      border-right: 1px solid $boolGray;
-      border-bottom: 1px solid $boolGray;
 
       .box {
         width: 50%;
         height: 50%;
-      }
+        border: 1px solid white;
 
-      .first {
-        border-right: 1px solid $boolGray;
-        border-bottom: 1px solid $boolGray;
-      }
-
-      .second {
-        border-bottom: 1px solid $boolGray;
-      }
-
-      .third {
-        border-right: 1px solid $boolGray;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -166,7 +150,11 @@
     .right {
       width: 40%;
       height: 100%;
-      // background: gray;
+      padding: 20px 50px;
+
+      #map {
+        margin-top: 20px;
+      }
     }
   }
 
