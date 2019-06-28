@@ -24,9 +24,47 @@
 
     @endforeach
   </form>
+  <br><br>
 
+    @if(count($errors)>0)
+      <div class="alert alert-danger">
+        upload validation error <br>
+        <ul>
+          @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
 
-  <a href="#">upload image</a>
+    @if($message= Session::get('success'))
+      <div class="alert alert-success alert-block">
+        <button type="button" name="" data-dismiss="alert">X</button>
+        <strong>{{$message}}</strong>
+      </div>
+      <img src="/images/{{Session::get('path')}}" width="300" alt="">
+    @endif
+
+  <br><br>
+  <form enctype="multipart/form-data" method="post" action="{{url('/uploadImage')}}">
+    {{ csrf_field() }}
+    <div class="form-group">
+      <table class="table">
+        <tr>
+          <td width="40%" align="right"><label>select file for upload</label></td>
+          <td width="30"><input type="file" name="select_file">/</td>
+          <td width="30%" align="left"><input type="submit" name="upload" value="upload"></td>
+        </tr>
+        <tr>
+          <td width="40%" align="right"></td>
+          <td width="30"><span class="text-muted">jpeg,jpg,png,gif,svg</span></td>
+          <td width="30%" align="left"></td>
+        </tr>
+      </table>
+    </div>
+
+  </form>
+
 
 
 
