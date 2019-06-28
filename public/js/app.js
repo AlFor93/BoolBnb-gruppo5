@@ -10754,11 +10754,16 @@ function geolocate(arr) {
   }).addTo(mymap);
 }
 
+function setRegistrationMinimumAge() {
+  var x = document.getElementById("date_of_birth").max = "1999-01-01";
+}
+
 function init() {
   var doc = $(document);
   doc.on('click', '#moreInfo', showMoreFlatInfo);
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
   getGeoData();
+  setRegistrationMinimumAge();
 }
 
 $(document).ready(init);

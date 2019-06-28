@@ -73,6 +73,9 @@ function geolocate(arr){
 
 }
 
+function setRegistrationMinimumAge() {
+  var x = document.getElementById("date_of_birth").max = "1999-01-01";
+}
 
 
 
@@ -83,6 +86,7 @@ function init() {
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
 
   getGeoData();
+  setRegistrationMinimumAge();
 
 }
 
