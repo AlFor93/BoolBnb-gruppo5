@@ -11,15 +11,12 @@ class Flat extends Model
     'number_of_rooms' ,
     'mq' ,
     'address',
-    'city',
-    'flat_price'
+    'city'
   ];
 
   function user() {
     return $this->belongsTo(User::class);
   }
-
-
 
   function services() {
     return $this->belongsToMany(Service::class);

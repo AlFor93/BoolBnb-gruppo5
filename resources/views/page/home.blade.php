@@ -17,7 +17,7 @@
         <p> <input type="text" name="" value=""> </p>
 
 
-      </div> 
+      </div>
     </div>
   </div>
 
@@ -25,22 +25,15 @@
 
     @foreach($flats as $flat)
 
-        <div class="flat">
-
-          <div class="">
-            @foreach($images as $image)
-              @if($flat->flat_id == $image->flat_id)
-                <div class="">
-                  <img src="{{$image->img_file}}" alt="">
-                </div>
-              @endif
-            @endforeach
-          </div>
-          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
-
-
+      @if ($flat->id % 4 == 0)
+        <div class="">
+          <img src="{{$flat->img_file}}" alt="">
         </div>
+        <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
+      @endif
+  
     @endforeach
+  </div>
 
     @foreach($allFlats as $oneFlat)
       <h1>{{$oneFlat->flat_name}}</h1>

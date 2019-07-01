@@ -13,17 +13,29 @@ class FlatController extends Controller
 {
   public function showSponsoredFlat()
   {
-    $images=Image::all();
+    // $images=Image::all();
 
     // SELECT * FROM images JOIN flats ON images.flat_id = flats.id WHERE images.flat_id = 4
 
+    // for ($i=0; $i < ; $i++) {
+    //   // code...
+    // }
+    // $images = DB::select('SELECT images.img_file, flats.id FROM images GROUP BY flats.id JOIN flats ON images.flat_id = flats.id ');
+    // dd($images);
+
     // $images = DB::table('images')
-    //           ->join ('flats','images.flat_id', '=', 'flats.id')
-    //           ->where('image.flat_id ', 'flats.id');
+    //           ->join ('flats','images.flat_id','=', 'flats.id')
+    //           ->groupBy('flats.id')
+    //
+    //           ->where('images.flat_id', '=','flats.id')
+    //           ->get();
     //           dd($images);
+
+
 
     $flats=DB::table('flats')
               ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
+              ->join('images','flats.id','=','images.flat_id')
               ->get();
 
               // dd($flats);
