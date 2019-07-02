@@ -2,14 +2,14 @@
 
 @section('content')
 
-  <h1>ecco la lista dei messaggi</h1><br>
+  <h1>Lista messaggi</h1>
 
   @foreach($messages as $message)
-    <div class="">
-      <h3></h3>
-      <h3>l'utente {{$message->sender}}</h3>
-      <h4>contenuto: {{$message->content}}</h4>
-    </div><br><br>
+    <div class="myMessage">
+      <p>Utente: {{$message->sender}}</p>
+      <div class="fake-row"></div>
+      <span>{{$message->content}}</span>
+    </div>
   @endforeach
 
 @stop

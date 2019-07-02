@@ -1,0 +1,29 @@
+
+h1 {
+  color: $boolGray;
+  margin: 20px;
+}
+
+.myMessage {
+  width: 500px;
+  margin: 20px;
+
+  .fake-row {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 3px 0;
+  }
+
+  p {
+    color: $boolGray;
+    font-size: 16px;
+  }
+
+  span {
+    color: $boolGray;
+    font-size: 14px;
+  }
+
+
+}

@@ -1,23 +1,24 @@
 @extends('index.index')
 
 @section('content')
-  <h1>PRPA</h1>
+  <div class="main-sendMessage">
+  <h1>Contatta {{ $user->name }}</h1>
 
-  <form class="" action="{{ route('save.message', $flat->id ) }}" method="post">
+  <form class="sendMessage" action="{{ route('save.message', $flat->id ) }}" method="post">
     @csrf
     @METHOD('POST')
-    <input type="text" name="sender"
+    <input id="senderMail" type="text" name="sender" autofocus
       @if ($registeredUser)
         value="{{$registeredUser->email}}"
       @endif
         value=""
-        placeholder="tua mail">
+        placeholder="inserisci la tua mail">
 
-    <input type="text" name="content" placeholder="scrivi messaggio" value="">
-
+    <textarea id="senderText" type="text" name="content" placeholder="scrivi messaggio" value=""></textarea>  
     <button type="submit" name="button">MANDA MESSAGGIO</button>
   </form>
   @if(session('success'))
     <h4>{{session('success')}}</h4>
   @endif
+  </div>
 @stop
