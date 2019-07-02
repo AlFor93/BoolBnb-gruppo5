@@ -14,8 +14,11 @@ class MessageSeeder extends Seeder
       factory(App\Message::class,30)->make()->each(function($message){
 
         $flat = App\Flat::inRandomOrder()->first();
+        $user = $flat->user_id;
+
 
         $message-> flat()-> associate($flat);
+        $message-> user()-> associate($user);
         $message->save();
 
       });

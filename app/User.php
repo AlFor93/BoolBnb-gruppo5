@@ -42,4 +42,8 @@ class User extends Authenticatable
     function flats() {
       return $this->hasMany(Flat::class);
     }
+
+    function messages() {
+      return $this->hasMany(Message::class);
+    }
 }

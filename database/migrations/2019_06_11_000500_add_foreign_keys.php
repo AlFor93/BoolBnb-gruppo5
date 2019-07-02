@@ -48,6 +48,11 @@ class AddForeignKeys extends Migration
         ->references('id')
         ->on('flats')
         ->onDelete('cascade');
+
+        $table->foreign('user_id' , 'userMess')
+        ->references('id')
+        ->on('users')
+        ->onDelete('cascade');
       });
 
       Schema::table('flat_sponsor', function (Blueprint $table){
@@ -82,6 +87,7 @@ class AddForeignKeys extends Migration
       Schema::table('messages' , function(Blueprint $table){
 
         $table->dropForeign('flatM');
+        $table->dropForeign('userMess');
       });
 
       Schema::table('images' , function(Blueprint $table){
