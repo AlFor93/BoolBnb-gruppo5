@@ -53,6 +53,10 @@
       top: 120px;
       left: 0;
       visibility: hidden;
+      a{
+        text-decoration: none;
+        color: darkblue;
+      }
     }
     &:hover img{
       opacity: 0.4;
@@ -60,7 +64,8 @@
     }
 
     &:hover h3{
-        visibility: visible;
+      visibility: visible;
+      font-weight: bold;
     }
   }
 }
@@ -72,6 +77,7 @@
   display: flex;
   @include flex-centered;
   flex-wrap: wrap;
+  
   .not-sponsored-flat{
     display: flex;
     flex-direction: column;
@@ -83,6 +89,10 @@
       position: absolute;
       visibility: hidden;
       cursor: progress;
+      a{
+        text-decoration: none;
+        color: darkblue;
+      }
     }
     &:hover img{
       opacity: 0.4;

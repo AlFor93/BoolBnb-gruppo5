@@ -90,6 +90,13 @@ footer .footer-box p {
   color: grey;
 }
 
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
 footer hr {
   margin: 20px;
 }
@@ -152,6 +159,11 @@ footer hr {
   visibility: hidden;
 }
 
+.flats-wrap .sponsored-flat h3 a {
+  text-decoration: none;
+  color: darkblue;
+}
+
 .flats-wrap .sponsored-flat:hover img {
   opacity: 0.4;
   transition: 1s;
@@ -159,6 +171,7 @@ footer hr {
 
 .flats-wrap .sponsored-flat:hover h3 {
   visibility: visible;
+  font-weight: bold;
 }
 
 .flats-wrap::-webkit-scrollbar {
@@ -185,6 +198,11 @@ footer hr {
   position: absolute;
   visibility: hidden;
   cursor: progress;
+}
+
+.not-sponsored-flats-wrap .not-sponsored-flat h3 a {
+  text-decoration: none;
+  color: darkblue;
 }
 
 .not-sponsored-flats-wrap .not-sponsored-flat:hover img {

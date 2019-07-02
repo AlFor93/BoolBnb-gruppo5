@@ -13,6 +13,10 @@ footer{
     margin: 10px 0;
     color: grey;
   }
+  .footer-bottom{
+    @include flex-centered;
+    padding: 20px;
+  }
   hr{
     margin: 20px;
   }
