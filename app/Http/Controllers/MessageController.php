@@ -58,21 +58,22 @@ class MessageController extends Controller
   function showMyMessages($id)
   {
 
-    $user=User::where('id',$id)->get()->first();
 
-    $messages=Message::where('user_id',$id)->get();
+    $flat=Flat::where('id',$id)->get()->first();
 
 
-    foreach ($messages as $message) {
+    $messages=Message::where('flat_id',$id)->get();
 
-      $flat=Flat::where('id',$message->flat_id)->get()->first();
-    }
+    // $flats=[];
+    // foreach ($messages as $message) {
+    //
+    //   $flats[]=Flat::where('id',$message->flat_id)->get()->first();
+    // }
 
     // dd($flat);
 
-    // dd($messages);
 
-    return view('page.messageList',compact('user','messages','flat'));
+    return view('page.messageList',compact('messages'));
   }
 
 

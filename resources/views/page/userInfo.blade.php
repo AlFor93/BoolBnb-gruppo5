@@ -15,6 +15,7 @@
       <td>mq</td>
       <td>stanze</td>
       <td>show/edit detail</td>
+      <td>controlla messaggi</td>
       <td>elimina</td>
     </tr>
     @foreach($flats as $flat)
@@ -27,6 +28,8 @@
             <td>{{$flat->number_of_rooms}}</td>
 
             <td><a href="{{route('show.graph',$flat->id)}}"><i class="fas fa-eye"></i></a></td>
+
+            <td><a href="{{route('show.MyMessages', $flat->id)}}">vedi messaggi app</a></td>
 
             <form class="" action="{{route('delete.flat',$flat->id)}}" method="post">
               @csrf
@@ -44,6 +47,6 @@
 
   <a href="{{route('add.flat')}}">aggiungi appartamento</a>
 
-  <a href="{{route('show.MyMessages', $thisUser->id)}}">controlla messaggi</a>
+
 
 @stop
