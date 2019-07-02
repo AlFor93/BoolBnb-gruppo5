@@ -25,7 +25,7 @@
             <div class="photo">
 
             </div>
-            <span>{{$flat->name}} {{$flat->lastname}}</span>
+            <span>{{$user->name}} {{$user->lastname}}</span>
           </div>
         </div>
         {{-- Center left second container --}}
