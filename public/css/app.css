@@ -38,6 +38,8 @@
   border: 0.5px lightgrey solid;
   box-shadow: 5px 5px 5px 5px rgba(184, 184, 184, 0.66);
   padding: 0 25px;
+  font-size: 16px;
+  color: #484848;
 }
 
 .header .header-searchbar .searchbar {
@@ -152,7 +154,15 @@ footer hr {
 .container-carousel i {
   margin: 15px;
   font-size: 110%;
+  color: #484848;
   cursor: pointer;
+}
+
+.container-carousel i:hover {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  color: #FF5A5F;
+  transition: 0.5s;
 }
 
 .container-carousel .flats-wrap {
@@ -160,7 +170,7 @@ footer hr {
   overflow: auto;
   overflow-x: hidden;
   padding: 20px 0;
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .container-carousel .flats-wrap .sponsored-flat {
@@ -175,15 +185,16 @@ footer hr {
   top: 120px;
   left: 0;
   visibility: hidden;
+  color: #484848;
 }
 
 .container-carousel .flats-wrap .sponsored-flat h3 a {
   text-decoration: none;
-  color: darkblue;
+  color: #008489;
 }
 
 .container-carousel .flats-wrap .sponsored-flat:hover img {
-  opacity: 0.4;
+  opacity: 0.3;
   transition: 1s;
 }
 
@@ -213,6 +224,7 @@ footer hr {
 }
 
 .not-sponsored-flats-wrap .not-sponsored-flat h3 {
+  max-width: 400px;
   position: absolute;
   visibility: hidden;
   cursor: progress;
@@ -220,11 +232,11 @@ footer hr {
 
 .not-sponsored-flats-wrap .not-sponsored-flat h3 a {
   text-decoration: none;
-  color: darkblue;
+  color: #008489;
 }
 
 .not-sponsored-flats-wrap .not-sponsored-flat:hover img {
-  opacity: 0.4;
+  opacity: 0.3;
   transition: 1s;
 }
 
@@ -428,6 +440,7 @@ footer hr {
   height: 50%;
   border: 1px solid white;
   overflow: auto;
+  overflow-y: hidden;
 }
 
 .main-flat .first-container .image-container .box img {
@@ -753,5 +766,35 @@ td {
   width: 15px;
   height: 15px;
   margin-right: 3px;
+}
+
+.search-flat-title {
+  width: 100vw;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-flat-title span {
+  color: #484848;
+}
+
+.search-flat-title span #flat-search-result {
+  color: black;
+  font-size: 120%;
+}
+
+.flat-search-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flat-search-result ul {
+  text-align: center;
+}
+
+.flat-search-result a {
+  text-decoration: none;
+  color: #484848;
 }
 

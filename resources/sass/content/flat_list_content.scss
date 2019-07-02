@@ -1,0 +1,25 @@
+.search-flat-title{
+  span{
+    color: $boolGray;
+
+    #flat-search-result{
+      color: black;
+      font-size: 120%;
+    }
+  }
+  width: 100vw;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.flat-search-result{
+  @include flex-centered;
+
+  ul{
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: $boolGray;
+  }
+}

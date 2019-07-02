@@ -41,15 +41,22 @@
   i{
     margin: 15px;
     font-size: 110%;
+    color: $boolGray;
     cursor: pointer;
+
+    &:hover{
+      transform: scale(1.7);
+      color: $boolRed;
+      transition: 0.5s;
+    }
   }
 
   .flats-wrap{
     display: flex;
     overflow: auto;
-  overflow-x:hidden;
+    overflow-x:hidden;
     padding: 20px 0;
-    max-width: 80vw;
+    max-width: 90vw;
 
     .sponsored-flat{
       position: relative;
@@ -62,13 +69,14 @@
         top: 120px;
         left: 0;
         visibility: hidden;
+        color: $boolGray;
         a{
           text-decoration: none;
-          color: darkblue;
+          color: $boolBlue;
         }
       }
       &:hover img{
-        opacity: 0.4;
+        opacity: 0.3;
         transition: 1s;
       }
 
@@ -97,16 +105,17 @@
     padding: 20px;
 
     h3{
+      max-width: 400px;
       position: absolute;
       visibility: hidden;
       cursor: progress;
       a{
         text-decoration: none;
-        color: darkblue;
+        color: $boolBlue;
       }
     }
     &:hover img{
-      opacity: 0.4;
+      opacity: 0.3;
       transition: 1s;
     }
 

@@ -47,7 +47,7 @@
         @if ($oneFlat->id % 4 == 0)
           <div class="not-sponsored-flat">
             <img src="{{$oneFlat->img_file}}" alt="">
-            <h3><a href="{{route('show.flat',$oneFlat->flat_id)}}">{{$oneFlat->flat_name}}</a> {{$oneFlat->address}}</h3><br>
+            <h3><a href="{{route('show.flat',$oneFlat->flat_id)}}">{{$oneFlat->address}}  - {{$flat->city}}</a> - {{$oneFlat->flat_name}}</h3><br>
 
           </div>
         @endif

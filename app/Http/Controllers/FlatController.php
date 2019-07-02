@@ -36,7 +36,7 @@ class FlatController extends Controller
     $city=$_GET['city'];
     $flats = Flat::where('city','LIKE','%'. $city .'%')->get();
 
-    return view('page.flatList', compact('flats'));
+    return view('page.flatList', compact('flats', 'city'));
     // dd($results);
   }
 
