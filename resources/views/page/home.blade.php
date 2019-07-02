@@ -26,10 +26,10 @@
     @foreach($flats as $flat)
 
       @if ($flat->id % 4 == 0)
-        <div class="">
+        <div class="sponsored-flat">
           <img src="{{$flat->img_file}}" alt="">
+          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
         </div>
-        <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
       @endif
 
     @endforeach
