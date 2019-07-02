@@ -1,8 +1,9 @@
 @extends('index.index')
 
 @section('content')
+<div class="main-details">
 
-  <form class="" action="{{route('update.flat', $flat->id)}}" method="post">
+  <form class="details-form" action="{{route('update.flat', $flat->id)}}" method="post">
     @csrf
     @method('PATCH')
 
@@ -12,8 +13,7 @@
     <input id="address" type="text" name="address" value="{{$flat->address}}">
     <input id="city" type="text" name="city" value="{{$flat->city}}">
     <input id="flat_price" type="text" name="flat_price" placeholder="Prezzo" value="{{$flat->flat_price}}">
-    <button type="submit" name="button">update flat</button> <br>
-
+    <div class="service">
     @foreach($allServId as $servId)
       <p><input type="checkbox" name="services[]" value="{{$servId->id}}">{{$servId->name}}</p>
 
@@ -21,10 +21,10 @@
     @foreach($checkedServices as $service)
       <p><input type="checkbox" checked name="services[]" value="{{$service->id}}">{{$service->name}}</p>
 
-
     @endforeach
+    </div>
+    <button type="submit" name="button">update flat</button> <br>
   </form>
-  <br><br>
 
     @if(count($errors)>0)
       <div class="alert alert-danger">
@@ -45,8 +45,7 @@
       <img src="/images/{{Session::get('path')}}" width="300" alt="">
     @endif
 
-  <br><br>
-  <form enctype="multipart/form-data" method="post" action="{{url('/uploadImage')}}">
+  {{-- <form enctype="multipart/form-data" method="post" action="{{url('/uploadImage')}}">
     {{ csrf_field() }}
     <div class="form-group">
       <table class="table">
@@ -63,8 +62,8 @@
       </table>
     </div>
 
-  </form>
-
+  </form> --}}
+</div>
 
 
 

@@ -798,3 +798,72 @@ td {
   color: #484848;
 }
 
+.main-details {
+  width: 100vw;
+  height: 800px;
+}
+
+.main-details .details-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-details .details-form #flat_name,
+.main-details .details-form #number_of_rooms,
+.main-details .details-form #mq,
+.main-details .details-form #address,
+.main-details .details-form #city,
+.main-details .details-form #flat_price {
+  width: 500px;
+  height: 45px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #484848;
+}
+
+.main-details .details-form #flat_name:focus,
+.main-details .details-form #number_of_rooms:focus,
+.main-details .details-form #mq:focus,
+.main-details .details-form #address:focus,
+.main-details .details-form #city:focus,
+.main-details .details-form #flat_price:focus {
+  border: 1px solid #008489;
+}
+
+.main-details .details-form button {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.main-details .details-form .service {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.main-details .details-form .service p {
+  font-size: 18px;
+  color: #484848;
+  margin: 0 10px 0 0;
+}
+
+.main-details .details-form .service p input {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
