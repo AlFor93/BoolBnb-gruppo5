@@ -51,11 +51,12 @@ class FlatController extends Controller
 
     $flat=Flat::where('flats.id',$id)
               ->get()->first();
-              
+
 
     $user = User::where('id',$flat->user_id)
               ->get()->first();
 
+    // dd($user);
 
     $images=Image::where('flat_id',$id)->get();
 
@@ -65,7 +66,7 @@ class FlatController extends Controller
               ->get();
 
 
-    return view('page.flats', compact('flat','images','services'));
+    return view('page.flats', compact('flat','user','images','services'));
   }
 
 

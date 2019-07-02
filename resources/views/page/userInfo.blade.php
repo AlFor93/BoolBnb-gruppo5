@@ -44,4 +44,6 @@
 
   <a href="{{route('add.flat')}}">aggiungi appartamento</a>
 
+  <a href="{{route('show.MyMessages', $thisUser->id)}}">controlla messaggi</a>
+
 @stop

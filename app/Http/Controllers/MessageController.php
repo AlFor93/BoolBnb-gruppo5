@@ -53,22 +53,26 @@ class MessageController extends Controller
 
     return redirect()->back()->withSuccess('Messaggio Inviato Con successo!');
 
+  }
+
+  function showMyMessages($id)
+  {
+
+    $user=User::where('id',$id)->get()->first();
+
+    $messages=Message::where('user_id',$id)->get();
 
 
+    foreach ($messages as $message) {
 
+      $flat=Flat::where('id',$message->flat_id)->get()->first();
+    }
 
-    // $message = new Message();
-    // $message->content = $validatedData('message_content');
-    // $message->sender = $validatedData('sender_mail');
-    // $message->sent_date = $validatedData('sender_mail');
-    // $message->sender = $request->sender;
-    // $message->sent_date = date('m-d');
-    // $message->user_id = (int)$request->user_id;
-    // $message->rental_id = (int)$request->rental_id;
-    //
-    // $message->user()->associate($user->id);
-    //
-    // $message->save();
+    // dd($flat);
+
+    // dd($messages);
+
+    return view('page.messageList',compact('user','messages','flat'));
   }
 
 

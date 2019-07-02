@@ -50,14 +50,17 @@ class HomeController extends Controller
 
 
       $inputAuthor= Auth::user()->id;
+
       $flats = Flat::where('user_id','=',$inputAuthor)->get();
       // $flats=DB::table('flat_service')
       //           ->join('services','flat_service.service_id','=','services.id')
       //           ->join('flats','flat_service.flat_id','=','flats.id')
       //           ->where('flats.user_id',$inputAuthor)
       //           ->get();
+      $thisUser=User::where('id',$inputAuthor)->get()->first();
+      // dd($thisUser);
 
-      return view('page.userInfo', compact('flats'));
+      return view('page.userInfo', compact('flats','thisUser'));
     }
 
     function saveNewFlat(FlatRequest $request ){
