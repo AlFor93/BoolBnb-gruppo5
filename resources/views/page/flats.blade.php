@@ -26,6 +26,7 @@
 
             </div>
             <span>{{$user->name}} {{$user->lastname}}</span>
+            <span><a href="{{ route('new.message', $flat->id) }}">Contatta l'host</a></span>
           </div>
         </div>
         {{-- Center left second container --}}
@@ -67,15 +68,14 @@
           </div>
 
           <span><a href="{{ route('new.message', $flat->id) }}">Contatta l'host</a></span>
-
-
+          <h4>Servizi</h4>
+          @foreach($services as $service)
+            <li>{{$service->name}}</li>
+          @endforeach
         </div>
-        <h4>Servizi</h4>
-        @foreach($services as $service)
-          <li>{{$service->name}}</li>
-        @endforeach
+
       </div>
-      <div class="right">
+      <div class="rightMap">
         <h2>Ubicazione</h2>
         <div id="map" >
         </div>
