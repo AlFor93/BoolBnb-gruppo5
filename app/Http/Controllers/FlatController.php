@@ -22,7 +22,7 @@ class FlatController extends Controller
 
               // dd($flats);
 
-    $allFlats=Flat::all();
+    $allFlats=Flat::join('images','flats.id','=','images.flat_id')->get();
 
     // dd($allFlats);
 

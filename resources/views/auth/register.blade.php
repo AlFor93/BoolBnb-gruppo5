@@ -47,7 +47,7 @@
             {{-- Date of birth input --}}
             <div class="date_of_birth">
               <h4>Data di nascita</h4>
-              <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"autocomplete="date_of_birth" autofocus>
+              <input id="date_of_birth" type="date" min='1930-01-01' max='2000-01-01' class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"autocomplete="date_of_birth" autofocus>
 
               @error('date_of_birth')
                   <span class="invalid-feedback" role="alert">

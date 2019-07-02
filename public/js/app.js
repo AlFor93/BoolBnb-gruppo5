@@ -10755,7 +10755,22 @@ function geolocate(arr) {
 }
 
 function setRegistrationMinimumAge() {
-  var x = document.getElementById("date_of_birth").max = "1999-01-01";
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+
+  var yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = '0' + dd;
+  }
+
+  if (mm < 10) {
+    mm = '0' + mm;
+  }
+
+  today = yyyy + '-' + mm + '-' + dd;
+  document.getElementById("date_of_birth").setAttribute("max", today);
 }
 
 function init() {
@@ -10788,8 +10803,8 @@ $(document).ready(init);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/BoolBnb-gruppo5/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/BoolBnb-gruppo5/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/BoolBnB-gruppo5/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/BoolBnB-gruppo5/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

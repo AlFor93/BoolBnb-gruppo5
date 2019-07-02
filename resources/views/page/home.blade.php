@@ -31,12 +31,17 @@
         </div>
         <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
       @endif
-  
+
     @endforeach
   </div>
 
     @foreach($allFlats as $oneFlat)
-      <h1>{{$oneFlat->flat_name}}</h1>
+      @if ($oneFlat->id % 4 == 0)
+        <div class="">
+          <img src="{{$oneFlat->img_file}}" alt="">
+        </div>
+        <h3><a href="{{route('show.flat',$oneFlat->flat_id)}}">{{$oneFlat->flat_name}}</a> {{$oneFlat->address}}</h3><br>
+      @endif
     @endforeach
   </div>
 
