@@ -1,0 +1,43 @@
+
+.main-sendMessage {
+  width: 100vw;
+  height: 600px;
+  padding: 50px 90px;
+
+  .sendMessage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    #senderMail {
+      width: 400px;
+    }
+
+    #senderText {
+      width: 500px;
+      height: 300px;
+    }
+
+    input,
+    textarea {
+      border: 1px solid #EBEBEB;
+      border-radius: 5px;
+      outline: none;
+      padding: 10px;
+      font-size: 16px;
+      color: $boolGray;
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 1px solid $boolBlue;
+    }
+
+
+    button {
+      @include loginRegisterButton;
+    }
+  }
+}

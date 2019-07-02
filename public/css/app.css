@@ -918,3 +918,80 @@ footer hr {
   margin-right: 3px;
 }
 
+.main-sendMessage {
+  width: 100vw;
+  height: 600px;
+  padding: 50px 90px;
+}
+
+.main-sendMessage .sendMessage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-sendMessage .sendMessage #senderMail {
+  width: 400px;
+}
+
+.main-sendMessage .sendMessage #senderText {
+  width: 500px;
+  height: 300px;
+}
+
+.main-sendMessage .sendMessage input,
+.main-sendMessage .sendMessage textarea {
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #484848;
+}
+
+.main-sendMessage .sendMessage input:focus,
+.main-sendMessage .sendMessage textarea:focus {
+  border: 1px solid #008489;
+}
+
+.main-sendMessage .sendMessage button {
+  width: 500px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: #FF5A5F;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #484848;
+  margin: 20px;
+}
+
+.myMessage {
+  width: 500px;
+  margin: 20px;
+}
+
+.myMessage .fake-row {
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 3px 0;
+}
+
+.myMessage p {
+  color: #484848;
+  font-size: 16px;
+}
+
+.myMessage span {
+  color: #484848;
+  font-size: 14px;
+}
+
