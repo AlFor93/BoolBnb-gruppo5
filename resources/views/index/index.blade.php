@@ -105,8 +105,8 @@
         </div>
         <div class="footer-box">
           <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin"></i>
           <p>Termini</p>
           <p>Privacy</p>
           <p>Mappa del sito</p>

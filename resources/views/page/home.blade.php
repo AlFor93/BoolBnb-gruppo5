@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
   {{-- <div class="main-home">
     <div class="wrapper">
 
@@ -21,18 +19,26 @@
     </div>
   </div> --}}
   <h2 id="sponsored-flat-list">Consigliati Per Te: </h2>
-  <div class="flats-wrap">
-    @foreach($flats as $flat)
 
-      @if ($flat->id % 4 == 0)
-        <div class="sponsored-flat">
-          <img src="{{$flat->img_file}}" alt="">
-          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}} - {{$flat->address}} - {{$flat->city}}</a> </h3><br>
-        </div>
-      @endif
+  <div class="container-carousel">
+    <i class="fas fa-chevron-left"></i>
 
-    @endforeach
+    <div class="flats-wrap">
+      @foreach($flats as $flat)
+
+        @if ($flat->id % 4 == 0)
+          <div class="sponsored-flat">
+            <img src="{{$flat->img_file}}" alt="">
+            <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}} - {{$flat->address}} - {{$flat->city}}</a> </h3><br>
+          </div>
+        @endif
+
+      @endforeach
+    </div>
+    <i class="fas fa-chevron-right"></i>
+
   </div>
+
 
   <div class="">
     <h2 id="all-flat-list">Cerca tutti gli appartamenti: </h2>

@@ -33,51 +33,56 @@
   width: 100%;
   text-align: center;
   color: dimgrey;
-
 }
-
-.flats-wrap{
+.container-carousel{
   display: flex;
-  overflow: auto;
-  padding: 20px 0;
-  max-width: 100vw;
+  @include flex-centered;
 
-  .sponsored-flat{
-    position: relative;
-    margin: 0 20px;
-    cursor: pointer;
 
-    h3{
-      width: 400px;
-      position: absolute;
-      top: 120px;
-      left: 0;
-      visibility: hidden;
-      a{
-        text-decoration: none;
-        color: darkblue;
+  .flats-wrap{
+    display: flex;
+    overflow: auto;
+    padding: 20px 0;
+    max-width: 80vw;
+
+    .sponsored-flat{
+      position: relative;
+      margin: 0 20px;
+      cursor: pointer;
+
+      h3{
+        width: 400px;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        visibility: hidden;
+        a{
+          text-decoration: none;
+          color: darkblue;
+        }
+      }
+      &:hover img{
+        opacity: 0.4;
+        transition: 1s;
+      }
+
+      &:hover h3{
+        visibility: visible;
+        font-weight: bold;
       }
     }
-    &:hover img{
-      opacity: 0.4;
-      transition: 1s;
-    }
-
-    &:hover h3{
-      visibility: visible;
-      font-weight: bold;
-    }
+  }
+  .flats-wrap::-webkit-scrollbar {
+      display: none;
   }
 }
-.flats-wrap::-webkit-scrollbar {
-    display: none;
-}
+
 
 .not-sponsored-flats-wrap{
   display: flex;
   @include flex-centered;
   flex-wrap: wrap;
-  
+
   .not-sponsored-flat{
     display: flex;
     flex-direction: column;
