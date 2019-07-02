@@ -61,7 +61,7 @@ class HomeController extends Controller
       // dd($thisUser);
 
       return view('page.userInfo', compact('flats','thisUser'));
-    }
+    } 
 
     function saveNewFlat(FlatRequest $request ){
 

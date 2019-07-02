@@ -85,6 +85,7 @@ footer .footer {
   align-items: center;
   justify-content: space-around;
   border-top: 1px lightgrey solid;
+  margin-top: 30px;
 }
 
 footer .footer-box i {
@@ -101,6 +102,10 @@ footer .footer-bottom {
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+footer .footer-bottom i {
+  margin: 10px;
 }
 
 footer hr {
@@ -592,8 +597,6 @@ footer hr {
 .main-UserInfo {
   width: 100vw;
   height: 800px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .main-UserInfo .saveFlat-form {
@@ -672,17 +675,65 @@ footer hr {
   border-radius: 5px;
 }
 
-table {
-  width: 40%;
-  height: 50px;
-  border-collapse: collapse;
-  margin: 20px 0;
+.userInfo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
+.userInfo-container .user-info-title {
+  margin: 30px;
+  width: 80vw;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #484848;
+}
+
+.userInfo-container .user-info-title strong {
+  margin: 0 7px;
+}
+
+.userInfo-container .table {
+  width: 90vw;
+  height: 40vh;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userInfo-container .table .table-head {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.userInfo-container .table .table-head span {
+  min-width: 10%;
+  height: 80px;
+  text-align: center;
+}
+
+.userInfo-container .table .table-content {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.userInfo-container .table .table-content span {
+  min-width: 10%;
+  height: 80px;
+  text-align: center;
+}
+
+.userInfo-container .table .table-content span .fas {
+  background: transparent;
+  font-size: 200%;
 }
 
 .main-update {

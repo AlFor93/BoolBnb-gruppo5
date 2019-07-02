@@ -116,7 +116,7 @@
       <hr>
       <div class="footer-bottom">
         <i class="fab fa-airbnb"></i>
-        <span>© 2019 Boolbnb, Inc. All rights reserved.</span>
+        <span> © 2019 Boolbnb, Inc. All rights reserved.</span>
       </div>
 
     </footer>

@@ -2,8 +2,6 @@
 .main-UserInfo {
   width: 100vw;
   height: 800px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 
   .saveFlat-form {
     width: 100%;
@@ -76,16 +74,58 @@
 
 // Show profile stye
 
-table {
-  width: 40%;
-  height: 50px;
-  border-collapse: collapse;
+.userInfo-container{
+  width: 100%;
+  @include flex-centered;
+  flex-direction: column;
 
-  margin: 20px 0;
-}
+  .user-info-title{
+    margin: 30px;
+    width: 80vw;
+    font-size: 150%;
+    @include flex-centered;
+    color: $boolGray;
 
-table, th, td {
-  border: 1px solid black;
+    strong{
+      margin: 0 7px;
+    }
+  }
+
+  .table {
+    width: 90vw;
+    height: 40vh;
+
+    margin: 20px 0;
+    @include flex-centered-column;
+
+    .table-head{
+      width: 100%;
+      display: flex;
+      padding: 10px;
+      span {
+        min-width: 10%;
+        height: 80px;
+        text-align: center;
+      }
+    }
+    .table-content{
+      width: 100%;
+      display: flex;
+      padding: 10px;
+      span {
+        min-width: 10%;
+        height: 80px;
+        text-align: center;
+        .fas{
+          background: transparent;
+          font-size: 200%;
+        }
+      }
+
+    }
+
+
+  }
 }
 
 
