@@ -4,7 +4,7 @@
 
 
 
-  <div class="main-home">
+  {{-- <div class="main-home">
     <div class="wrapper">
 
       <div class="search-box">
@@ -19,30 +19,37 @@
 
       </div>
     </div>
-  </div>
-
+  </div> --}}
+  <h2 id="sponsored-flat-list">Consigliati Per Te: </h2>
   <div class="flats-wrap">
-
     @foreach($flats as $flat)
 
       @if ($flat->id % 4 == 0)
         <div class="sponsored-flat">
           <img src="{{$flat->img_file}}" alt="">
-          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}}</a> {{$flat->address}}</h3><br>
+          <h3><a href="{{route('show.flat',$flat->flat_id)}}">{{$flat->flat_name}} - {{$flat->address}}</a> </h3><br>
         </div>
       @endif
 
     @endforeach
   </div>
 
-    @foreach($allFlats as $oneFlat)
-      @if ($oneFlat->id % 4 == 0)
-        <div class="">
-          <img src="{{$oneFlat->img_file}}" alt="">
-        </div>
-        <h3><a href="{{route('show.flat',$oneFlat->flat_id)}}">{{$oneFlat->flat_name}}</a> {{$oneFlat->address}}</h3><br>
-      @endif
-    @endforeach
+  <div class="">
+    <h2 id="all-flat-list">Cerca tutti gli appartamenti: </h2>
+    <div class="not-sponsored-flats-wrap">
+      @foreach($allFlats as $oneFlat)
+        @if ($oneFlat->id % 4 == 0)
+          <div class="not-sponsored-flat">
+            <img src="{{$oneFlat->img_file}}" alt="">
+            <h3><a href="{{route('show.flat',$oneFlat->flat_id)}}">{{$oneFlat->flat_name}}</a> {{$oneFlat->address}}</h3><br>
+            
+          </div>
+        @endif
+      @endforeach
+    </div>
+
   </div>
+
+
 
 @stop
