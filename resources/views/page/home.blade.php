@@ -21,7 +21,7 @@
   <h2 id="sponsored-flat-list">Consigliati Per Te: </h2>
 
   <div class="container-carousel">
-    <i class="fas fa-chevron-left"></i>
+    <i id="arrow-left" class="fas fa-chevron-left arrow-left"></i>
 
     <div class="flats-wrap">
       @foreach($flats as $flat)
@@ -35,7 +35,7 @@
 
       @endforeach
     </div>
-    <i class="fas fa-chevron-right"></i>
+    <i id="arrow-right" class="fas fa-chevron-right arrow-right"></i>
 
   </div>
 

@@ -44,6 +44,7 @@ function getGeoData(){
       var coordinate = [];
 
       var results = data.results;
+      // console.log(results);
 
       var longitudine = results[0].position.lon;
 
@@ -91,6 +92,16 @@ function setRegistrationMinimumAge() {
 
 }
 
+function scrollCarousel(){
+  $('.arrow-left').click(function(){
+    var pos = $('.flats-wrap').animate( { scrollLeft: '-=300' }, 500);
+    console.log('prova');
+  })
+  $('.arrow-right').click(function(){
+    var pos = $('.flats-wrap').animate( { scrollLeft: '+=300' }, 500);
+  })
+}
+
 
 
 function init() {
@@ -100,7 +111,10 @@ function init() {
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
 
   getGeoData();
-  setRegistrationMinimumAge();
+  // setRegistrationMinimumAge();
+
+  scrollCarousel();
+  // console.log('prova');
 
 }
 

@@ -38,10 +38,16 @@
   display: flex;
   @include flex-centered;
 
+  i{
+    margin: 15px;
+    font-size: 110%;
+    cursor: pointer;
+  }
 
   .flats-wrap{
     display: flex;
     overflow: auto;
+  overflow-x:hidden;
     padding: 20px 0;
     max-width: 80vw;
 

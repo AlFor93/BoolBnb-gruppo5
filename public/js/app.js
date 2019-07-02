@@ -10734,7 +10734,8 @@ function getGeoData() {
     method: "GET",
     success: function success(data) {
       var coordinate = [];
-      var results = data.results;
+      var results = data.results; // console.log(results);
+
       var longitudine = results[0].position.lon;
       var latitudine = results[0].position.lat;
       coordinate.push(latitudine, longitudine);
@@ -10773,12 +10774,27 @@ function setRegistrationMinimumAge() {
   document.getElementById("date_of_birth").setAttribute("max", today);
 }
 
+function scrollCarousel() {
+  $('.arrow-left').click(function () {
+    var pos = $('.flats-wrap').animate({
+      scrollLeft: '-=300'
+    }, 500);
+    console.log('prova');
+  });
+  $('.arrow-right').click(function () {
+    var pos = $('.flats-wrap').animate({
+      scrollLeft: '+=300'
+    }, 500);
+  });
+}
+
 function init() {
   var doc = $(document);
   doc.on('click', '#moreInfo', showMoreFlatInfo);
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
-  getGeoData();
-  setRegistrationMinimumAge();
+  getGeoData(); // setRegistrationMinimumAge();
+
+  scrollCarousel(); // console.log('prova');
 }
 
 $(document).ready(init);
