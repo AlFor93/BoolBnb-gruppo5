@@ -149,9 +149,16 @@ footer hr {
   justify-content: center;
 }
 
+.container-carousel i {
+  margin: 15px;
+  font-size: 110%;
+  cursor: pointer;
+}
+
 .container-carousel .flats-wrap {
   display: flex;
   overflow: auto;
+  overflow-x: hidden;
   padding: 20px 0;
   max-width: 80vw;
 }
