@@ -51,7 +51,7 @@
       width: 400px;
       position: absolute;
       top: 120px;
-      left: 30%;
+      left: 0;
       visibility: hidden;
     }
     &:hover img{
@@ -61,7 +61,6 @@
 
     &:hover h3{
         visibility: visible;
-
     }
   }
 }
@@ -82,6 +81,16 @@
 
     h3{
       position: absolute;
+      visibility: hidden;
+      cursor: progress;
+    }
+    &:hover img{
+      opacity: 0.4;
+      transition: 1s;
+    }
+
+    &:hover h3{
+      visibility: visible;
     }
 
   }

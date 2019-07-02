@@ -148,7 +148,7 @@ footer hr {
   width: 400px;
   position: absolute;
   top: 120px;
-  left: 30%;
+  left: 0;
   visibility: hidden;
 }
 
@@ -183,6 +183,17 @@ footer hr {
 
 .not-sponsored-flats-wrap .not-sponsored-flat h3 {
   position: absolute;
+  visibility: hidden;
+  cursor: progress;
+}
+
+.not-sponsored-flats-wrap .not-sponsored-flat:hover img {
+  opacity: 0.4;
+  transition: 1s;
+}
+
+.not-sponsored-flats-wrap .not-sponsored-flat:hover h3 {
+  visibility: visible;
 }
 
 .main-register {
