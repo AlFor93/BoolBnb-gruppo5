@@ -91,71 +91,124 @@
     }
   }
 
-  .table {
-    width: 90vw;
-    height: 40vh;
+  // .table {
+  //   width: 90vw;
+  //   height: 40vh;
+  //
+  //   margin: 20px 0;
+  //   @include flex-centered-column;
+  //
+  //   .table-head{
+  //     width: 100%;
+  //     display: flex;
+  //     padding: 10px;
+  //     justify-content: center;
+  //     span {
+  //       min-width: 10%;
+  //       height: 80px;
+  //       text-align: center;
+  //       color: $boolGray;
+  //       padding: 10px;
+  //     }
+  //   }
+  //   .table-content{
+  //     width: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     padding: 10px;
+  //
+  //     span {
+  //       min-width: 10%;
+  //       text-align: center;
+  //       padding: 10px;
+  //       height: 80px;
+  //
+  //       .show-message{
+  //         text-decoration: none;
+  //         color: $boolRed;
+  //         &:hover{
+  //           font-size: 130%;
+  //           transition: 1s;
+  //           color: $boolBlue;
+  //         }
+  //       }
+  //       i{
+  //         font-size: 200%;
+  //         background: transparent;
+  //         color: $boolGray;
+  //         cursor: pointer;
+  //
+  //         &:hover{
+  //           transition: 1s;
+  //           transform: scale(1.5);
+  //           color: $boolRed;
+  //         }
+  //       }
+  //       button{
+  //         background: transparent;
+  //         border: none;
+  //
+  //       }
+  //
+  //     }
+  //
+  //   }
+  //
+  //
+  // }
+.cards-wrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  width: 100%;
+  margin: 30px 0;
 
-    margin: 20px 0;
+  .flat-card{
+    border: 0.5px solid lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    width: 30%;
     @include flex-centered-column;
+    span{
+      margin: 6px;
+      color: $boolGray;
 
-    .table-head{
-      width: 100%;
-      display: flex;
-      padding: 10px;
-      justify-content: center;
-      span {
-        min-width: 10%;
-        height: 80px;
-        text-align: center;
+      &:first-child{
+
+        color: $boolBlue;
+      }
+
+      button{
+        background: transparent;
+        border:none;
+      }
+      a{
+        text-decoration: none;
+        color: $boolRed;
+      }
+
+      i{
+        font-size: 200%;
+        background: transparent;
         color: $boolGray;
-        padding: 10px;
-      }
-    }
-    .table-content{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
+        cursor: pointer;
+        margin: 10px;
 
-      span {
-        min-width: 10%;
-        text-align: center;
-        padding: 10px;
-        height: 80px;
-
-        .show-message{
-          text-decoration: none;
+        &:hover{
+          transition: 1s;
+          transform: scale(1.5);
           color: $boolRed;
-          &:hover{
-            font-size: 130%;
-            transition: 1s;
-            color: $boolBlue;
-          }
-        }
-        i{
-          font-size: 200%;
-          background: transparent;
-          border-color: white;
-          outline: none;
-          border-radius: 10px;
-          color: $boolGray;
-          cursor: pointer;
-
-          &:hover{
-            transition: 1s;
-            transform: scale(1.5);
-            color: $boolRed;
-          }
         }
       }
-
     }
-
 
   }
+}
+
   .boolbnb-btn{
     @include loginRegisterButton;
     @include flex-centered;
+    margin: 40px;
     a{
       color: white;
       text-decoration: none;
