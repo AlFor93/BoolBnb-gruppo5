@@ -16,7 +16,7 @@
     <script src="{{ mix('/js/app.js') }}"></script>
     {{-- fontawesome --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    
+
     {{-- google FONTS --}}
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
@@ -74,7 +74,7 @@
 
     <footer>
       <div class="footer">
-        <div class="footer-box">
+        <div class="footer-box sacrificale">
           <strong>BoolBnb</strong>
           <p>Opportunità di Lavoro</p>
           <p>Stampa</p>
@@ -84,7 +84,7 @@
           <p>Accessiblità</p>
           <p>Informazioni di Contatto</p>
         </div>
-        <div class="footer-box">
+        <div class="footer-box sacrificale">
           <strong>BoolBnb</strong>
           <p>Opportunità di Lavoro</p>
           <p>Stampa</p>
@@ -94,7 +94,7 @@
           <p>Accessiblità</p>
           <p>Informazioni di Contatto</p>
         </div>
-        <div class="footer-box">
+        <div class="footer-box sacrificale">
           <strong>BoolBnb</strong>
           <p>Opportunità di Lavoro</p>
           <p>Stampa</p>
