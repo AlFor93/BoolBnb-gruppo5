@@ -992,8 +992,8 @@ footer hr {
     margin: 2px;
   }
 
-  .boolbnb-btn {
-    width: 20px;
+  .userInfo-container .boolbnb-btn {
+    width: 250px;
   }
 }
 
