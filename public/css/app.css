@@ -871,6 +871,10 @@ footer hr {
   color: #484848;
 }
 
+.userInfo-container .user-info-title p {
+  text-align: center;
+}
+
 .userInfo-container .user-info-title strong {
   margin: 0 7px;
 }
@@ -878,7 +882,6 @@ footer hr {
 .userInfo-container .cards-wrap {
   display: flex;
   justify-content: space-around;
-  align-items: space-around;
   width: 100%;
   margin: 30px 0;
 }
@@ -897,6 +900,7 @@ footer hr {
 .userInfo-container .cards-wrap .flat-card span {
   margin: 6px;
   color: #484848;
+  text-align: center;
 }
 
 .userInfo-container .cards-wrap .flat-card span:first-child {
@@ -948,6 +952,26 @@ footer hr {
   color: white;
   text-decoration: none;
   font-size: 16px;
+}
+
+@media screen and (max-width: 850px) {
+  .userInfo-container .cards-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userInfo-container .cards-wrap .flat-card {
+    width: 50%;
+    margin: 10px;
+  }
+
+  .userInfo-container .cards-wrap .flat-card span {
+    margin: 2px;
+  }
+
+  .boolbnb-btn {
+    width: 20px;
+  }
 }
 
 .main-update {
