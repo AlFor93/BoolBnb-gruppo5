@@ -378,6 +378,33 @@ footer hr {
   text-decoration: none;
 }
 
+@media screen and (max-width: 550px) {
+  .main-register .register-form #name,
+  .main-register .register-form #lastname,
+  .main-register .register-form #email,
+  .main-register .register-form #password,
+  .main-register .register-form #password-confirm,
+  .main-register .register-form #date_of_birth {
+    width: 250px;
+  }
+
+  .main-register .register-form .date_of_birth {
+    width: 250px;
+  }
+
+  .main-register .register-form .fake_row {
+    width: 250px;
+  }
+
+  .main-register .register-form button {
+    width: 250px;
+  }
+
+  .main-register .register-form .already_registered {
+    width: 250px;
+  }
+}
+
 .main-login {
   width: 100vw;
   height: 550px;
@@ -466,6 +493,29 @@ footer hr {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
+  .main-login .login-form #email,
+  .main-login .login-form #password {
+    width: 250px;
+  }
+
+  .main-login .login-form .form-check {
+    width: 250px;
+  }
+
+  .main-login .login-form .fake_row {
+    width: 250px;
+  }
+
+  .main-login .login-form button {
+    width: 250px;
+  }
+
+  .main-login .login-form .not_registered {
+    width: 250px;
+  }
 }
 
 .main-flat .first-container {
@@ -760,6 +810,30 @@ footer hr {
   outline: none;
   border: none;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .main-UserInfo {
+    width: 100vw;
+    height: 800px;
+  }
+
+  .main-UserInfo .saveFlat-form #flat_name,
+  .main-UserInfo .saveFlat-form #number_of_rooms,
+  .main-UserInfo .saveFlat-form #mq,
+  .main-UserInfo .saveFlat-form #address,
+  .main-UserInfo .saveFlat-form #city,
+  .main-UserInfo .saveFlat-form #flat_price {
+    width: 250px;
+  }
+
+  .main-UserInfo .saveFlat-form .services {
+    width: 250px;
+  }
+
+  .main-UserInfo .saveFlat-form button {
+    width: 250px;
+  }
 }
 
 .userInfo-container {
@@ -1065,6 +1139,25 @@ footer hr {
   margin-right: 3px;
 }
 
+@media screen and (max-width: 450px) {
+  .main-details .details-form #flat_name,
+  .main-details .details-form #number_of_rooms,
+  .main-details .details-form #mq,
+  .main-details .details-form #address,
+  .main-details .details-form #city,
+  .main-details .details-form #flat_price {
+    width: 250px;
+  }
+
+  .main-details .details-form button {
+    width: 250px;
+  }
+
+  .main-details .details-form .service {
+    width: 250px;
+  }
+}
+
 .main-sendMessage {
   width: 100vw;
   height: 600px;
@@ -1115,6 +1208,32 @@ footer hr {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 550px) {
+  .main-sendMessage {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-sendMessage .sendMessage {
+    align-items: center;
+  }
+
+  .main-sendMessage .sendMessage #senderMail {
+    width: 250px;
+  }
+
+  .main-sendMessage .sendMessage #senderText {
+    width: 250px;
+    height: 300px;
+  }
+
+  .main-sendMessage .sendMessage button {
+    width: 250px;
+  }
+}
+
 h1 {
   color: #484848;
   margin: 20px;
@@ -1140,5 +1259,29 @@ h1 {
 .myMessage span {
   color: #484848;
   font-size: 14px;
+}
+
+@media screen and (max-width: 850px) {
+  .myMessage {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .myMessage .fake-row {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 3px 0;
+  }
+
+  .myMessage p {
+    color: #484848;
+    font-size: 16px;
+  }
+
+  .myMessage span {
+    color: #484848;
+    font-size: 14px;
+  }
 }
 

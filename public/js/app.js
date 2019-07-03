@@ -10792,27 +10792,17 @@ function init() {
   var doc = $(document);
   doc.on('click', '#moreInfo', showMoreFlatInfo);
   doc.on('click', '#lessInfo', removeMoreFlatInfo);
-  var pageURL = $(location).attr("href"); // if (window.location.href.indexOf("http://192.168.1.250/flat") > -1) {
+  scrollCarousel();
+  var pageURL = $(location).attr("href");
 
-  getGeoData(); // }
+  if (window.location.href.indexOf("http://192.168.1.250/flat") > -1) {
+    getGeoData();
+  }
 
-  scrollCarousel(); // if (pageURL == "http://192.168.1.250/register"){
-
-  setRegistrationMinimumAge(); // }
-  // scrollCarousel();
-  // console.log('prova');
-} // function changeActivePage() {
-//   var pageURL = $(location).attr("href");
-//
-//   if (pageURL == "http://192.168.1.251/") {
-//     var home = $(".home");
-//     home.addClass("active");
-//   } else if (pageURL == "http://192.168.1.251/corso") {
-//     var corso = $(".corso");
-//     corso.addClass("active");
-//   }
-// }
-
+  if (pageURL == "http://192.168.1.250/register") {
+    setRegistrationMinimumAge();
+  }
+}
 
 $(document).ready(init);
 

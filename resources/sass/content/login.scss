@@ -74,3 +74,40 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+
+  .main-login {
+
+
+    .login-form {
+
+
+      #email,
+      #password {
+        width: 250px;
+      }
+
+      #email:focus,
+      #password:focus {
+      }
+
+      .form-check {
+        width: 250px;
+      }
+
+      .fake_row {
+        width: 250px;
+      }
+
+      button {
+        width: 250px;
+      }
+
+      .not_registered {
+        width: 250px;
+
+      }
+    }
+  }
+}

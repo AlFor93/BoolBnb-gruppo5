@@ -41,3 +41,30 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .main-sendMessage {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sendMessage {
+      align-items: center;
+
+      #senderMail {
+        width: 250px;
+      }
+
+      #senderText {
+        width: 250px;
+        height: 300px;
+      }
+
+
+      button {
+        width: 250px;
+      }
+    }
+  }
+}

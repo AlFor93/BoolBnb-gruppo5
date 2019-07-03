@@ -59,7 +59,33 @@
         }
       }
   }
-
-
-
 }
+
+@media screen and (max-width: 450px) {
+
+  .main-details {
+
+    .details-form {
+
+      #flat_name,
+      #number_of_rooms,
+      #mq,
+      #address,
+      #city,
+      #flat_price {
+        width:250px;
+
+      }
+
+      button {
+        width: 250px;
+      }
+
+
+        .service {
+          width: 250px;
+
+          }
+        }
+    }
+  }

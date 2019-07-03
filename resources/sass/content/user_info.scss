@@ -72,6 +72,34 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+
+  .main-UserInfo {
+    width: 100vw;
+    height: 800px;
+
+    .saveFlat-form {
+
+      #flat_name,
+      #number_of_rooms,
+      #mq,
+      #address,
+      #city,
+      #flat_price {
+        width: 250px;
+      }
+
+      .services {
+        width: 250px;
+      }
+
+      button {
+        width: 250px;
+      }
+    }
+  }
+}
+
 // Show profile stye
 
 .userInfo-container{

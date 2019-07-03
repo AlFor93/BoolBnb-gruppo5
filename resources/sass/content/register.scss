@@ -76,3 +76,39 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+
+  .main-register {
+
+
+    .register-form {
+
+
+      #name,
+      #lastname,
+      #email,
+      #password,
+      #password-confirm,
+      #date_of_birth {
+        width: 250px;
+      }
+
+      .date_of_birth {
+        width: 250px;
+      }
+
+      .fake_row {
+        width: 250px;
+      }
+
+      button {
+        width: 250px;
+      }
+
+      .already_registered {
+        width: 250px;
+      }
+    }
+  }
+}
