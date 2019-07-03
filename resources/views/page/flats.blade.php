@@ -75,11 +75,11 @@
         </div>
 
       </div>
-      <div class="rightMap">
+      {{-- <div class="rightMap">
         <h2>Ubicazione</h2>
         <div id="map" >
         </div>
-      </div>
+      </div> --}}
 
     </div>
   </div>
