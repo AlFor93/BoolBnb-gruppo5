@@ -24,14 +24,28 @@ class FlatRequest extends FormRequest
     public function rules()
     {
         return [
-          'flat_name' => '',
-          'number_of_rooms' =>'',
-          'mq' => '',
-          'address' => '',
-          'city' => '',
-          'flat_price' => '',
+          'flat_name' => 'required|string|max:50',
+          'number_of_rooms' =>'required|numeric',
+          'mq' => 'required|numeric',
+          'address' => 'required|string',
+          'city' => 'required|string',
+          'flat_price' => 'required|numeric',
           'user_id' => '',
           'services'=> ''
         ];
+    }
+
+    public function messages()
+    {
+      return [
+        'flat_name.required' => 'flat name is required',
+        'number_of_rooms.requred' =>'number of room is required',
+        'mq.requred' => 'mq is required',
+        'address.requred' => 'address is required',
+        'city.requred' => 'city is required',
+        'flat_price.requred' => 'price is required',
+        'user_id' => '',
+        'services'=> ''
+      ];
     }
 }
