@@ -61,7 +61,6 @@
         </div>
         {{-- Bottom left second container --}}
         <div class="bottom">
-          <button type="button" name="button">Traduci questa descrizione in Italiano</button>
           <p>We are offering a clean, well presented and recently refurbished double studio situated in the heart of Madrid, Spain.<br> Sol square is just 2 minutes walk away, Also the studio is within walking distance to all major attractions and museums.</p>
           <div class="moreInfo">
              <span id="moreInfo">Leggi altre informazioni sullo spazio <i class="fas fa-angle-down"></i></span>
@@ -75,11 +74,11 @@
         </div>
 
       </div>
-      {{-- <div class="rightMap">
+      <div class="rightMap">
         <h2>Ubicazione</h2>
         <div id="map" >
         </div>
-      </div> --}}
+      </div>
 
     </div>
   </div>
