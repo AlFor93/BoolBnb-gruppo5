@@ -114,15 +114,15 @@ function init() {
   var pageURL = $(location).attr("href");
 
 
-  if (window.location.href.indexOf("http://192.168.1.250/flat") > -1) {
+  // if (window.location.href.indexOf("http://192.168.1.250/flat") > -1) {
     getGeoData();
-  }
+  // }
 
   scrollCarousel();
 
-  if (pageURL == "http://192.168.1.250/register"){
+  // if (pageURL == "http://192.168.1.250/register"){
     setRegistrationMinimumAge();
-  }
+  // }
 
 
 
