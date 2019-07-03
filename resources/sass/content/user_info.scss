@@ -85,81 +85,19 @@
     font-size: 150%;
     @include flex-centered;
     color: $boolGray;
-
+    p{
+      text-align: center;
+    }
     strong{
       margin: 0 7px;
     }
   }
 
-  // .table {
-  //   width: 90vw;
-  //   height: 40vh;
-  //
-  //   margin: 20px 0;
-  //   @include flex-centered-column;
-  //
-  //   .table-head{
-  //     width: 100%;
-  //     display: flex;
-  //     padding: 10px;
-  //     justify-content: center;
-  //     span {
-  //       min-width: 10%;
-  //       height: 80px;
-  //       text-align: center;
-  //       color: $boolGray;
-  //       padding: 10px;
-  //     }
-  //   }
-  //   .table-content{
-  //     width: 100%;
-  //     display: flex;
-  //     justify-content: center;
-  //     padding: 10px;
-  //
-  //     span {
-  //       min-width: 10%;
-  //       text-align: center;
-  //       padding: 10px;
-  //       height: 80px;
-  //
-  //       .show-message{
-  //         text-decoration: none;
-  //         color: $boolRed;
-  //         &:hover{
-  //           font-size: 130%;
-  //           transition: 1s;
-  //           color: $boolBlue;
-  //         }
-  //       }
-  //       i{
-  //         font-size: 200%;
-  //         background: transparent;
-  //         color: $boolGray;
-  //         cursor: pointer;
-  //
-  //         &:hover{
-  //           transition: 1s;
-  //           transform: scale(1.5);
-  //           color: $boolRed;
-  //         }
-  //       }
-  //       button{
-  //         background: transparent;
-  //         border: none;
-  //
-  //       }
-  //
-  //     }
-  //
-  //   }
-  //
-  //
-  // }
+
 .cards-wrap{
   display: flex;
   justify-content: space-around;
-  align-items: space-around;
+
   width: 100%;
   margin: 30px 0;
 
@@ -172,6 +110,7 @@
     span{
       margin: 6px;
       color: $boolGray;
+      text-align: center;
 
       &:first-child{
 
@@ -217,6 +156,28 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .userInfo-container{
+    .cards-wrap{
+      flex-direction: column;
+      align-items: center;
+
+      .flat-card{
+        width: 50%;
+        margin: 10px ;
+        span{
+          margin: 2px;
+        }
+      }
+
+
+    }
+  }
+  .boolbnb-btn{
+    width: 20px;
+  }
+
+}
 
 // Edit flat style
 

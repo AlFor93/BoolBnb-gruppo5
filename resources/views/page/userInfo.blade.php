@@ -6,7 +6,7 @@
   <div class="userInfo-container">
 
     <div class="user-info-title">
-      Benvenuto <strong>{{$thisUser->name}}, </strong> ecco la lista dei tuoi appartamenti.
+      <p> Benvenuto <strong>{{$thisUser->name}}, </strong> ecco la lista dei tuoi appartamenti.</p>
     </div>
 
 
@@ -54,6 +54,12 @@
   <div class="boolbnb-btn">
     <a href="{{route('add.flat')}}">aggiungi appartamento</a>
   </div>
+
+
+</div>
+  
+
+
 
 
 
