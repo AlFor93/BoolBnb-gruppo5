@@ -17,7 +17,7 @@
         {{-- Top left second container --}}
         <div class="top">
           <div class="info">
-            <h1>{{$flat->flat_name}}</h1>
+            <h1 id="flatName">{{$flat->flat_name}}</h1>
             <p id="addressData">{{$flat->address}}</p>
             <p id="cityData">{{$flat->city}}</p>
           </div>
