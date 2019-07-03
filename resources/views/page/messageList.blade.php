@@ -9,6 +9,7 @@
       <p>Utente: {{$message->sender}}</p>
       <div class="fake-row"></div>
       <span>{{$message->content}}</span>
+      <a href="mailto:{{$message->sender}}">Scrivi una mail</a>
     </div>
   @endforeach
 

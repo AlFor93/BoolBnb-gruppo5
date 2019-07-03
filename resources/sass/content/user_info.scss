@@ -102,23 +102,50 @@
       width: 100%;
       display: flex;
       padding: 10px;
+      justify-content: center;
       span {
         min-width: 10%;
         height: 80px;
         text-align: center;
+        color: $boolGray;
+        padding: 10px;
       }
     }
     .table-content{
       width: 100%;
       display: flex;
+      justify-content: center;
       padding: 10px;
+
       span {
         min-width: 10%;
-        height: 80px;
         text-align: center;
-        .fas{
-          background: transparent;
+        padding: 10px;
+        height: 80px;
+
+        .show-message{
+          text-decoration: none;
+          color: $boolRed;
+          &:hover{
+            font-size: 130%;
+            transition: 1s;
+            color: $boolBlue;
+          }
+        }
+        i{
           font-size: 200%;
+          background: transparent;
+          border-color: white;
+          outline: none;
+          border-radius: 10px;
+          color: $boolGray;
+          cursor: pointer;
+
+          &:hover{
+            transition: 1s;
+            transform: scale(1.5);
+            color: $boolRed;
+          }
         }
       }
 

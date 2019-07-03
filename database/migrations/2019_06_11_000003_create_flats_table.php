@@ -22,6 +22,7 @@ class CreateFlatsTable extends Migration
             $table->string('city');
             $table->float('flat_price')->unsigned();
             $table->bigInteger('user_id')->unsigned()->index();
+            $table->integer('points')->default(0);
             $table->timestamps();
         });
     }

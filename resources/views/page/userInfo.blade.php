@@ -32,13 +32,13 @@
 
                 <span><a href="{{route('show.graph',$flat->id)}}"><i class="fas fa-eye"></i></a></span>
 
-                <span><a href="{{route('show.MyMessages', $flat->id)}}">vedi messaggi app</a></span>
+                <span><a class="show-message" href="{{route('show.MyMessages', $flat->id)}}">vedi messaggi app</a></span>
 
                 <span>
                   <form class="" action="{{route('delete.flat',$flat->id)}}" method="post">
                     @csrf
                     @method('DELETE')
-                        <button class="del-butt" type="submit"><i class="fas fa-trash-alt"></i></button>
+                        <button class="del-butt" type="submit"><i class="far fa-trash-alt"></i></button>
                   </form>
                 </span>
 

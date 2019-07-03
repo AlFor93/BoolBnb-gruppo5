@@ -6,6 +6,8 @@ Auth::routes();
 Route::get('/' , 'FlatController@showSponsoredFlat')->name('BoolHome');
 Route::get('/flat/{id}' , 'FlatController@showFlat')->name('show.flat');
 Route::get('/searchFlat' , 'FlatController@searchFlat')->name('search.flat');
+//
+
 
 // USER ROUTES
 

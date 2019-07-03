@@ -64,7 +64,8 @@
 
   .login-form{
     height: 100%;
-    @include flex-centered
+    @include flex-centered;
+    margin: 0 20px;
   }
 
 }

@@ -12,6 +12,8 @@ $factory->define(App\Flat::class, function (Faker $faker) {
         'mq' => $faker->numberBetween(50,100),
         'address'=> 'via T. Albinoni',
         'city'=> 'Desenzano Del Garda',
-        'flat_price' =>$faker->numberBetween(20, 200)
+        'flat_price' =>$faker->numberBetween(20, 200),
+        'points'=> 0
+
     ];
 });

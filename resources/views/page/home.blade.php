@@ -40,7 +40,7 @@
   </div>
 
 
-  <div class="">
+  <div class="all-flats-container">
     <h2 id="all-flat-list">Cerca tutti gli appartamenti: </h2>
     <div class="not-sponsored-flats-wrap">
       @foreach($allFlats as $oneFlat)

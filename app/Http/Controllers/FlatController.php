@@ -14,7 +14,6 @@ class FlatController extends Controller
   public function showSponsoredFlat()
   {
 
-
     $flats=DB::table('flats')
               ->join('flat_sponsor','flats.id','=','flat_sponsor.flat_id')
               ->join('images','flats.id','=','images.flat_id')

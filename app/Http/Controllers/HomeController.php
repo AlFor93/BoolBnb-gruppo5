@@ -32,14 +32,6 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-
-
-    // public function index()
-    // {
-    //     return view('index');
-    // }
-
-
     function showProfile(){
 
       // SELECT flats.flat_name,flats.number_of_rooms,flats.mq,flats.flat_price,
@@ -61,7 +53,7 @@ class HomeController extends Controller
       // dd($thisUser);
 
       return view('page.userInfo', compact('flats','thisUser'));
-    } 
+    }
 
     function saveNewFlat(FlatRequest $request ){
 
