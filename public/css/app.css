@@ -686,7 +686,7 @@ footer hr {
   height: 400px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
   .main-flat .first-container .image-container .box {
     width: 100%;
   }
