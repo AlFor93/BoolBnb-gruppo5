@@ -135,6 +135,8 @@
     padding: 15px;
     width: 30%;
     @include flex-centered-column;
+    margin: 20px;
+    flex-wrap: wrap;
     span{
       margin: 6px;
       color: $boolGray;
