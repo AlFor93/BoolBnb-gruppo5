@@ -873,7 +873,6 @@ footer hr {
   border: 0.5px solid lightgray;
   border-radius: 20px;
   padding: 15px;
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
